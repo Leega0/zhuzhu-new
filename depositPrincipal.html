@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>存入本金</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="ui-record-top">
+    <h3 class="ui-record-amount">45.33</h3>
+    <p class="ui-record-title">存入本金(元)</p>
+    <a href="javascript:void(0);" class="depositPrincipal-btn depositPrincipal-btn-close"></a>
+
+    <div class="depositPrincipal-detail clearfix">
+      <div class="depositPrincipal-detail-item">
+        <p class="depositPrincipal-detail-title">实际支付(元)</p>
+        <p class="depositPrincipal-detail-amount">9000</p>
+      </div>
+
+      <div class="depositPrincipal-detail-item">
+        <p class="depositPrincipal-detail-title">使用特权金收益(元)</p>
+        <p class="depositPrincipal-detail-amount">9000</p>
+      </div>
+
+      <div class="depositPrincipal-detail-item">
+        <p class="depositPrincipal-detail-title">使用佣金(元)</p>
+        <p class="depositPrincipal-detail-amount">9000</p>
+      </div>
+
+      <div class="depositPrincipal-detail-item">
+        <p class="depositPrincipal-detail-title">使用红包(元)</p>
+        <p class="depositPrincipal-detail-amount">9000</p>
+      </div>
+    </div>
+  </div>
+
+  <table class="ui-record">
+    <colgroup>
+      <col width="50%"/>
+      <col width="50%"/>
+    </colgroup>
+
+    <tr>
+      <th>时间</th>
+      <th>收益</th>
+    </tr>
+    
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+
+    <tr>
+      <td>2015.5.12</td>
+      <td>0.23</td>
+    </tr>
+  </table>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $showBtn = $('.depositPrincipal-btn');
+
+  $showBtn.on('click', function() {
+    var _self = $(this);
+    var $detail = $('.depositPrincipal-detail');
+
+    if(_self.hasClass('depositPrincipal-btn-close')) {
+      _self.addClass('depositPrincipal-btn-open').removeClass('depositPrincipal-btn-close');
+      $detail.show(300);
+    } else {
+      _self.removeClass('depositPrincipal-btn-open').addClass('depositPrincipal-btn-close');
+      $detail.hide(300);
+    }
+  });
+</script>
+</html>

@@ -1,0 +1,54 @@
+body {
+  background-color: #f12b71;
+}
+
+#lottery_btn {
+  background-image: url(../images/event-01-25/lottery-btn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#lottery_btn:active {
+  background-image: url(../images/event-01-25/lottery-btn-actived.png);
+}
+
+.lottery-head-img img {
+  display: block;
+  width: 100%;
+}
+
+.prize-lotter {
+  margin: 1rem auto;
+  width: 17.3rem;
+  height: 16.5rem;
+  box-sizing: border-box;
+  padding: 0.36rem;
+  background-color: #cd0849;
+}
+
+.prize-lotter li {
+  float: left;
+  width: 5.3rem;
+  height: 5.05rem;
+  margin: 0.1rem;
+  position: relative;
+}
+
+.prize-lotter li img, .prize-lotter li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.prize-lotter-shadow {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  border-radius: 0.4rem;
+}
+
+/*# sourceMappingURL=lottery.css.map */

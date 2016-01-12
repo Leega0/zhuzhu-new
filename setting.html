@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>个人中心</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body>
+  <div class="setting-top">
+    <img class="setting-head" src="images/test-head.jpg" alt=""/>
+    <p class="setting-username">13586862548</p>
+  </div>
+
+  <div class="setting-container">
+    <a href="#" class="setting-item">
+      <span class="setting-item-content">
+        <img src="images/icon-png/profile.png" alt="" class="setting-item-icon"/>
+        <span class="setting-item-title">身份确认</span>
+        <i></i>
+        <span class="setting-item-status">未认证</span>
+      </span>
+    </a>
+
+    <a href="#" class="setting-item">
+      <span class="setting-item-content">
+        <img src="images/icon-png/card.png" alt="" class="setting-item-icon"/>
+        <span class="setting-item-title">银行卡</span>
+        <i></i>
+        <span class="setting-item-status">未认证</span>
+      </span>
+    </a>
+
+    <a href="#" class="setting-item">
+      <span class="setting-item-content">
+        <img src="images/icon-png/message.png" alt="" class="setting-item-icon"/>
+        <span class="setting-item-title">微信</span>
+        <i></i>
+        <span class="setting-item-status">未认证</span>
+      </span>
+    </a>
+
+    <a href="#" class="setting-item">
+      <span class="setting-item-content">
+        <img src="images/icon-png/position.png" alt="" class="setting-item-icon"/>
+        <span class="setting-item-title">收货地址</span>
+        <span class="setting-item-status"><img src="images/icon-png/arrow-right.png" alt=""></span>
+      </span>
+    </a>
+
+    <a href="#" class="setting-item setting-invite">
+      <span class="setting-item-content setting-item-invite">
+        <img src="images/icon-png/list.png" alt="" class="setting-item-icon"/>
+        <span class="setting-item-title">我的邀请码</span>
+        <span class="setting-item-status ui-font-main">038173</span>
+      </span>
+    </a>
+  </div>
+
+  <div class="setting-btn-wrap">
+    <a href="#" class="ui-btn ui-btn-inline ui-btn-whiteBlack">返回个人中心</a>
+    <a href="#" class="ui-btn ui-btn-inline ui-btn-main">佣金计划</a>
+  </div>
+
+
+  <!--邀请码弹窗-->
+  <div class="setting-inviteCode-dialog ui-hide">
+    <div class="seting-inviteCode-top">
+      <div class="setting-inviteCode">586126</div>
+      <div class="setting-inviteTitle">邀请码</div>
+    </div>
+
+    <p class="ui-dialog-text">以上数字是您专属的邀请码。发送给好友，让其注册时填写您与好友均可得到2000元猪猪基金 , 另外您还可得到0.1%的特权收益率。</p>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $inviteBtn = $('.setting-invite');
+
+  $inviteBtn.on('click', function() {
+    $.dialog('.setting-inviteCode-dialog', {
+      redClose: true
+    });
+  });
+</script>
+</html>

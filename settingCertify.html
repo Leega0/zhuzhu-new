@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>身份信息确认</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+
+  <div class="deposit-container">
+    <div class="ui-input-wrap">
+      <div class="ui-label">真实姓名</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input id="test" type="text" class="ui-input"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-label">身份证号</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input type="tel" class="ui-input" maxlength="18"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+
+        <p class="ui-input-placeholder">目前仅支持大陆用户注册，身份证尾号为X的用户，最后一位可不填，系统为您自动填写。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-fixed-bottom">
+    <p class="ui-tips">猪猪会在您支付成功之后核对您的身份信息。</p>
+    <a href="javascript:void(0);" class="ui-btn ui-btn-main">确 认</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $bankCard = $('#bankCard');
+
+  $bankCard.bankInput();
+
+  var $test = $('#test');
+  $test.on('blur', function() {
+    $(this).wrongInput('姓名错误');
+  });
+</script>
+</html>

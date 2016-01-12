@@ -1,0 +1,63 @@
+.prize-tab-item,
+.prize-tab-item:visited {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  padding: 1em 0;
+  width: 50%;
+  font-size: .875rem;
+  color: colors(assist-font);
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.prize-tab-item-active,
+.prize-tab-item-active:visited {
+  color: colors(sub-font);
+  border-bottom-color: colors(main);
+}
+
+.prizeHelp-table {
+  margin: 1rem auto;
+  width: 100%;
+
+  td,th {
+    padding: .5em 0;
+    font-size: .75rem;
+    text-align: center;
+  }
+
+  th {
+    color: colors(assist-font);
+    background-color: colors(background);
+  }
+
+  tr {
+
+    &:nth-of-type(3n) {
+      td {
+        background-color: colors(background);
+      }
+    }
+    td {
+      color: colors(sub-font);
+      background-color: #fff;
+    }
+  }
+}
+
+.prize-follow {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+
+  img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}

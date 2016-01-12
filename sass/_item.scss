@@ -1,0 +1,481 @@
+/*存就送首页*/
+
+.itemIndex-item {
+  @extend %clearfix;
+
+  &:nth-child(2n) {
+    .itemIndex-item-detail {
+      background-color: #eee;
+    }
+  }
+
+  .itemIndex-item-img {
+    display: block;
+    float: left;
+    width: 60%;
+    height: 9.5rem;
+  }
+
+  .itemIndex-item-detail {
+    box-sizing: border-box;
+    float: left;
+    padding: 1rem 1rem 0;
+    width: 40%;
+    height: 9.5rem;
+    background-color: #fbfbfb;
+
+    .itemIndex-item-name {
+      font-size: 1.25rem;
+      color: #0b0b0b;
+    }
+
+    .itemIndex-item-intro {
+      padding-top: .5em;
+      font-size: .625rem;
+      line-height: 1.5;
+      color: colors(sub-font);
+    }
+    .itemIndex-item-count {
+      padding: .8em 0;
+      font-size: .625rem;
+      line-height: 1.5;
+      color: #0b0b0b;
+    }
+    .ui-btn {
+      margin-bottom: 0;
+      font-size: .75rem;
+    }
+  }
+}
+
+/*存就送*/
+
+.item-img {
+  display: block;
+  width: 100%;
+}
+.item-container {
+  @extend %shadow;
+  box-sizing: border-box;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #fff;
+
+  .item-money {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid colors(border);
+  }
+  .item-money-title {
+    font-size: .75rem;
+    color: colors(sub-font);
+  }
+  .item-money-amount {
+    padding-top: .5em;
+    font-size: .75rem;
+    color: colors(sub-font);
+
+    span {
+      font-size: 1.5rem;
+      color: colors(main);
+    }
+  }
+
+  .item-title {
+    padding-top: 1rem;
+    font-size: .875rem;
+    color: colors(main-font);
+  }
+  .item-text {
+    padding: 1em 0;
+    font-size: .625rem;
+    line-height: 1.5;
+    color: colors(sub-font);
+  }
+}
+.item-btn-wrap {
+  box-sizing: border-box;
+  padding: 1rem .5rem;
+  width: 100%;
+  background-color: colors(background);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  .ui-btn {
+    margin: 0;
+  }
+}
+
+.item-dialog {
+  //display: none;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  font-size: .8rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  -webkit-transform: translate(0, 60em);
+  transform: translate(0, 60em);
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+
+  .ui-container {
+    padding: 0 1em;
+  }
+  .item-dialog-close {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url('../images/icon-png/close.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.5em 1.5em;
+    background-size: 1.5em 1.5em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 10;
+  }
+  .item-dialog-detail {
+    width: 100%;
+
+    td {
+      padding: .5em 0;
+      color: colors(main-font);
+      vertical-align: top;
+
+      &:first-of-type {
+        padding-left: 1rem;
+      }
+      &:last-of-type {
+        padding-right: 1rem;
+      }
+      p {
+        padding: .5em 0;
+        line-height: 1.5;
+      }
+
+      .ui-btn-link {
+        float: left;
+        margin: .5em .5em .5em 0;
+        color: colors(main-font);
+
+        &:last-of-type {
+          margin: .5em 0;
+        }
+      }
+    }
+    .item-dialog-title {
+      color: colors(assist-font);
+    }
+    .item-dialog-money-title {
+      padding-top: 1.2rem;
+    }
+    .item-dialog-money {
+      padding-top: 1rem;
+
+      p {
+        color: colors(main-font);
+      }
+      i {
+        font-size: 1.3125rem;
+        color: colors(main);
+
+      }
+    }
+    .item-dialog-border {
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    .item-dialog-count {
+
+      span {
+        display: inline-block;
+        margin-right: .5em;
+        padding: .5em 0;
+        float: left;
+      }
+
+      .item-dialog-amount {
+        min-width: 1em;
+        text-align: center;
+      }
+
+      .ui-btn-link {
+        width: 2.5em;
+        margin: 0 .5em 0 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/*存就送资产列表*/
+
+.item-top {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 100%;
+  color: #fff;
+  background-color: colors(main);
+
+  .item-top-title {
+    font-size: .625rem;
+  }
+  .item-top-count {
+    padding-top: .5em;
+    font-size: 3.125rem;
+  }
+}
+
+.item-history {
+  padding: 1rem 0 2rem;
+}
+
+
+/*资产项目*/
+
+.item-content {
+  @extend %shadow;
+  box-sizing: border-box;
+  margin-bottom: .5rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #fff;
+
+  .item-title {
+    font-size: 1rem;
+    color: #444a59;
+
+    .item-status {
+      float: right;
+      font-size: .75rem;
+      color: colors(main);
+    }
+  }
+
+  .item-text {
+    padding: 1em 0;
+    font-size: .625rem;
+    line-height: 1.5;
+    color: colors(assist-font);
+  }
+
+  .item-count {
+    float: left;
+    padding-top: .4em;
+    font-size: .75rem;
+    color: colors(sub-font);
+  }
+  .item-address {
+    float: right;
+    font-size: .75rem;
+  }
+
+  .item-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid colors(border);
+  }
+  .item-detail {
+    @extend %clearfix;
+    font-size: .625rem;
+
+    .item-money {
+      color: colors(main);
+    }
+    .item-deadline{
+      float: right;
+      color: colors(sub-font);
+    }
+  }
+  .item-control {
+    @extend %clearfix;
+    padding-top: 1rem;
+
+    .ui-link {
+      float: right;
+      margin-top: .4em;
+    }
+  }
+}
+
+/*提前赎回*/
+.itemRedeem-container {
+  padding: 1rem;
+}
+.itemRedeem-title {
+  padding: 1em;
+  font-size: .875em;
+  color: #fff;
+  background-color: colors(main);
+}
+.itemRedeem-label {
+  float: left;
+  font-size: .75em;
+  color: colors(sub-font);
+}
+.itemRedeem-detail {
+  float: right;
+  font-size: .75em;
+  color: colors(main-font);
+}
+.itemRedeem-count {
+  margin-bottom: 1em;
+  padding: .5em 0;
+  border-bottom: 1px solid #e2e2e2;
+
+  .itemRedeem-label {
+    padding: .5em 0;
+  }
+  .itemRedeem-amount {
+    display: inline-block;
+    width: 2em;
+    font-size: .75em;
+    text-align: center;
+  }
+}
+.itemRedeem-control {
+  float: right;
+
+  .ui-btn-link {
+    margin: 0;
+    padding: .5em 0;
+    width: 5em;
+    font-size: .75em;
+  }
+}
+.itemRedeem-text {
+  @extend %clearfix;
+  padding: .6em 0;
+}
+.itemRedeem-total {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #e2e2e2;
+  color: colors(sub-font);
+}
+.itemRedeem-money {
+  padding-bottom: .8em;
+  font-size: .875em;
+  text-align: right;
+}
+
+/*提前赎回成功*/
+.itemRedeem-success-container {
+  padding: 1rem;
+}
+.itemRedeem-success {
+  padding-left: 2em;
+  height: 7em;
+  background-image: url('../images/redeem-progress-bg.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-background-size: 1.5rem auto;
+  background-size: 1.5rem auto;
+}
+.itemRedeem-step01 {
+  padding-top: .3em;
+  padding-bottom: 3.3em;
+}
+.itemRedeem-successText {
+  font-size: .875em;
+  color: #474747;
+}
+.itemRedeem-subtext {
+  padding-top: .5em;
+  font-size: .75em;
+  color: #ababab;
+}
+
+
+/*提前赎回明细*/
+.itemRedeemDetail-title {
+  padding: 1em 0;
+  font-size: 1.875rem;
+  text-align: center;
+  color: colors(sub-font);
+  border-bottom: 1px solid colors(border);
+}
+.itemRedeemDetail-list {
+  margin: .5rem auto 0;
+  width: 80%;
+
+  th,td {
+    padding: .8em 0;
+    font-size: .875rem;
+    text-align: center;
+  }
+  th {
+    padding-bottom: 2em;
+    color: colors(assist-font);
+  }
+  td {
+    color: colors(main-font);
+  }
+}
+
+
+
+/*存就送确认*/
+.itemConfirm-total {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid colors(border);
+
+  .itemConfirm-total-title {
+    float: left;
+    padding-top: .5rem;
+    font-size: 1rem;
+    color: colors(main-font);
+  }
+  .itemConfirm-total-amount {
+    float: right;
+    font-size: 1.5rem;
+    color: colors(main);
+  }
+}
+.itemConfirm-detail {
+  margin-bottom: .5rem;
+  padding: .5rem 0 1rem;
+  border-bottom: 1px solid colors(border);
+
+  .itemConfirm-detail-text {
+    padding-top: .5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    color: colors(main-font);
+  }
+  .itemConfirm-detail-subtext {
+    padding-top: .5rem;
+    font-size: .625rem;
+    line-height: 1.5;
+    color: colors(main-font);
+  }
+}
+.itemConfirm-pay {
+  margin-top: .5rem;
+  padding-top: 1rem;
+  font-size: .75rem;
+  color: colors(sub-font);
+  border-top: 1px solid colors(border);
+}
+
+
+/*收货地址*/
+
+.itemAddress-address {
+  margin-right: 3%;
+  width: 30%;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+
+

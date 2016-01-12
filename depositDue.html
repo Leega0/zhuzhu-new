@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>到期处理方式</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  <link rel="stylesheet" type="text/css" href="style/plugin.css">
+</head>
+
+<body>
+  <div class="depositDue-top clearfix">
+    <div class="depositDue-top-item">
+      <p class="depositDue-top-title">存入本金（元）</p>
+      <p class="depositDue-top-amount">500000.00</p>
+      <p class="depositDue-top-prize">+4</p>
+    </div>
+
+    <div class="depositDue-top-item">
+      <p class="depositDue-top-title">存入本金（元）</p>
+      <p class="depositDue-top-amount">50000</p>
+    </div>
+  </div>
+
+  <div class="ui-container">
+    <div class="depositDue-item depositDue-item-quit">
+      <div class="ui-fl">
+        <h3 class="depositDue-item-title">到期退出</h3>
+        <p class="depositDue-item-intro">到期后本金及收益自动返还到绑定的银行卡</p>
+      </div>
+
+      <div class="depositDue-radio">
+        <input class="ui-checkbox" type="radio" name="due"/>
+      </div>
+    </div>
+
+    <div class="depositDue-item depositDue-item-renewal">
+      <div class="ui-fl">
+        <h3 class="depositDue-item-title">到期续投</h3>
+        <p class="depositDue-item-intro">单个钱罐存入金≥500元</p>
+      </div>
+
+      <div class="depositDue-radio">
+        <input checked="checked" class="ui-checkbox" type="radio" name="due"/>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="depositDue-create">
+        <div class="ui-input-wrap">
+          <div class="ui-label">完成时间</div>
+
+          <div class="ui-input-body ui-input-body-label">
+            <p class="depositDue-create-amount">累计存入本金+累计收益 <a href="javascript:void(0);" class="ui-input-help depositDue-create-helpBtn"></a></p>
+          </div>
+        </div>
+
+        <div class="ui-input-wrap">
+          <div class="ui-label">完成时间</div>
+
+          <div class="ui-input-body ui-input-body-label">
+            <div class="ui-input-content">
+              <input id="depositCreateDate" type="text" class="ui-input"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-input-wrap">
+          <div class="ui-label">
+            <a href="#" class="depositDue-create-target ui-btn-link ui-btn-link-white">旅游</a>
+          </div>
+
+          <div class="ui-input-body ui-input-body-label ui-pt5">
+            <div class="ui-input-content">
+              <input type="text" class="ui-input"/>
+              <a href="javascript:void(0);" class="ui-input-clear"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="depositDue-tips">到期处理方式，钱罐到期前5个工作日内(2015年8月30日后)，不可修改</p>
+
+    <a href="#" class="ui-btn ui-btn-main">确 认</a>
+  </div>
+
+  <div class="depositDue-create-help ui-pt10 ui-hide">
+    <p class="ui-dialog-text">目标金额（续投金额）=最终存入本金+最终收益</p>
+    <p class="ui-dialog-text">如选择续投时，累计存入本金500元，累计收益0.88元；</p>
+    <p class="ui-dialog-text">钱罐到期时累计存入本金1000元，累计收益1.88元；</p>
+    <p class="ui-dialog-text">则目标金额为1000.88元。</p>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $itemQuit = $('.depositDue-item-quit'),
+      $itemRenewal = $('.depositDue-item-renewal'),
+      $checkboxQuit = $('.ui-checkbox', $itemQuit),
+      $checkboxRenewal = $('.ui-checkbox', $itemRenewal);
+
+  $(function() {
+    if($checkboxRenewal[0].checked) {
+      $itemRenewal.find('.depositDue-create').css('display', 'block');
+    }
+
+    /*$itemRenewal.off();
+     $checkboxRenewal.off();*/
+  });
+
+  $('.depositDue-item').on('click', function() {
+    var $this = $(this);
+
+    $('.ui-checkbox', $this).trigger('click');
+  });
+
+  $checkboxQuit.on('click', function() {
+    $checkboxRenewal.next('.ui-checkbox-icon').removeClass('ui-checkbox-icon-checked');
+    $itemRenewal.find('.depositDue-create').css('display', 'none');
+  });
+
+  $checkboxRenewal.on('click', function() {
+    $checkboxQuit.next('.ui-checkbox-icon').removeClass('ui-checkbox-icon-checked');
+    $itemRenewal.find('.depositDue-create').css('display', 'block');
+  });
+
+  //测试为取本地时间，实际应取服务器时间
+  var currYear = new Date().getFullYear(),
+      currMonth = new Date().getMonth() + 1,
+      currDay = new Date().getDate();
+  var currDate = currYear + '/' + currMonth + '/' + currDay,
+      limitDate = currYear + 1 + '/' + currMonth + '/' + currDay;
+
+  $('#depositCreateDate').mobiscroll().date({
+    mode: 'scroller',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default
+    display: 'modal', // Specify display mode like: display: 'bottom' or omit setting to use default
+    lang: 'zh',        // Specify language like: lang: 'pl' or omit setting to use default
+    buttons: [
+      {
+        text: '确认',
+        handler: 'set',
+        cssClass: 'ui-btn-whiteBlack ui-btn'
+      }
+
+    ],
+    rows: 3,
+    minDate: new Date(currDate),     //最小时间
+    maxDate: new Date(limitDate),    //最大时间
+    dateFormat: 'yy.mm.dd',
+    onSelect: function(valueText, inst) {
+      alert(valueText);
+    }
+  });
+
+  var $helpBtn = $('.depositDue-create-helpBtn');
+  $helpBtn.on('click', function() {
+    $.dialog('.depositDue-create-help');
+  });
+</script>
+</html>

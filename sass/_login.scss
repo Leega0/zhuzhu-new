@@ -1,0 +1,16 @@
+.login-content {
+  @extend %shadow;
+  padding: 1rem .5rem;
+  background-color: #fff;
+}
+
+.login-btn-wrap {
+  padding-top: 2rem;
+
+  .login-btn-tips {
+    padding-bottom: 1.5rem;
+    font-size: .625rem;
+    text-align: center;
+    color: colors(sub-font);
+  }
+}

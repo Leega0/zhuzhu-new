@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="shareRegister-container">
+    <img class="shareRegister-img" src="images/share/share-register-slogan.png" alt=""/>
+
+    <p class="shareRegister-help"><a href="#" class="ui-link ui-link-red">特权金是什么？</a></p>
+
+    <div class="shareRegister-content">
+      <div class="ui-input-wrap">
+        <div class="ui-input-body">
+          <div class="ui-input-content">
+            <input type="text" class="ui-input" placeholder="请输入手机号码"/>
+            <a href="javascript:void(0);" class="ui-input-clear"></a>
+          </div>
+
+          <p class="ui-pt5"><a href="#" class="ui-link ui-link-red login-key-help">猪猪钱罐用户协议</a></p>
+        </div>
+      </div>
+
+      <div class="ui-input-wrap">
+        <div class="ui-input-body">
+          <div class="clearfix">
+            <div class="ui-input-content ui-input-content-btn">
+              <input type="text" class="ui-input" placeholder="请输入验证码"/>
+              <a href="javascript:void(0);" class="ui-input-clear"></a>
+            </div>
+
+            <a class="ui-btn ui-btn-inline ui-btn-main ui-input-btn">发 送</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="ui-btn ui-btn-main">领取收益</a>
+    </div>
+
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $captcha = $('.ui-input-btn');
+
+  var sendTimeout;
+  $captcha.one('click', sendCode);
+
+  function sendCode(e) {
+    var $this = $(this);
+    var count = 90;
+
+    //发送验证码操作...
+
+
+    $this.empty().text(count + '秒').addClass('ui-btn-whiteBlack-border').removeClass('ui-btn-main');
+
+    sendTimeout = setInterval(function() {
+      count--;
+
+      if (count < 0) {
+        clearInterval(sendTimeout);
+        $captcha.one('click', sendCode);
+        $this.empty().text('重新发送').addClass('ui-btn-main').removeClass('ui-btn-whiteBlack-border');
+      } else {
+        $this.empty().text(count + '秒');
+      }
+    }, 1000);
+  }
+
+  var $keyHelp = $('.login-key-help');
+
+  $keyHelp.on('click', function() {
+    $.dialog('.login-key-dialog');
+  });
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>猪猪红包</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-main">
+  <div class="shareGift-head">
+    <img src="images/test-head.jpg" alt=""/>
+  </div>
+
+  <p class="shareGift-name">疯狂的猪猪</p>
+  <p class="ui-font-white ui-align-center ui-large">送你1个红包</p>
+
+  <div class="ui-container">
+
+    <p class="shareGift-money"><span>5</span>元</p>
+
+    <p class="ui-font-white ui-align-center ui-pb10">有效期至：2015-10-10</p>
+
+    <div class="shareGift-input">
+      <div class="ui-input-wrap">
+        <div class="ui-input-body">
+          <div class="ui-input-content">
+            <input type="text" class="ui-input" placeholder="请输入手机号码"/>
+            <a href="javascript:void(0);" class="ui-input-clear"></a>
+          </div>
+
+          <p class="ui-pt5"><a href="#" class="ui-link ui-link-gray login-key-help">用户协议</a></p>
+        </div>
+      </div>
+
+      <div class="ui-input-wrap">
+        <div class="ui-input-body">
+          <div class="clearfix">
+            <div class="ui-input-content ui-input-content-btn">
+              <input type="text" class="ui-input" placeholder="请输入验证码"/>
+              <a href="javascript:void(0);" class="ui-input-clear"></a>
+            </div>
+
+            <a class="ui-btn ui-btn-inline ui-btn-main ui-input-btn">发 送</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="shareGift-btn"></a>
+
+    <div class="shareGift-content">
+      <h3 class="shareGift-title">红包规则</h3>
+
+      <ul class="ui-list ui-list-num">
+        <li>领红包后，7天内有效。</li>
+        <li>每笔存钱最多使用1个红包。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shareGift-new">
+    <p class="ui-font-white ui-bold">您还将获得：</p>
+
+    <ul class="ui-list ui-list-num">
+      <li>5000元特权金；</li>
+      <li>0.5%的额外年化收益率。</li>
+    </ul>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $captcha = $('.ui-input-btn');
+
+  var sendTimeout;
+  $captcha.one('click', sendCode);
+
+  function sendCode(e) {
+    var $this = $(this);
+    var count = 90;
+
+    //发送验证码操作...
+
+
+    $this.empty().text(count + '秒').addClass('ui-btn-whiteBlack-border').removeClass('ui-btn-main');
+
+    sendTimeout = setInterval(function() {
+      count--;
+
+      if (count < 0) {
+        clearInterval(sendTimeout);
+        $captcha.one('click', sendCode);
+        $this.empty().text('重新发送').addClass('ui-btn-main').removeClass('ui-btn-whiteBlack-border');
+      } else {
+        $this.empty().text(count + '秒');
+      }
+    }, 1000);
+  }
+</script>
+</html>

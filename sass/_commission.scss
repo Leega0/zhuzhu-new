@@ -1,0 +1,433 @@
+/*佣金计划首页*/
+
+.commission-container {
+  @extend %shadow;
+  padding: .5rem 1rem;
+  background-color: #fff;
+  
+  .commission-item {
+    @extend %clearfix;
+    padding: 1rem 0;
+    border-bottom: 1px solid colors(border);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    .commission-mine {
+      float: left;
+
+      .commission-mine-title {
+        padding-bottom: .5em;
+        font-size: .625rem;
+        color: colors(assist-font);
+      }
+      .commission-mine-amount {
+        font-size: 2.1875rem;
+        color: colors(main);
+      }
+    }
+    .commission-cash {
+      float: right;
+      margin-bottom: 0;
+      margin-top: 1.5em;
+      width: 8em;
+      font-size: .75rem;
+    }
+
+    .commission-item-title {
+      padding-bottom: .5em;
+      font-size: .875rem;
+      color: colors(sub-font);
+    }
+
+    .commission-data-item {
+      float: left;
+      box-sizing: border-box;
+      width: 30%;
+
+      &:nth-of-type(2) {
+        text-align: center;
+      }
+      &:nth-of-type(3) {
+        width: 40%;
+        text-align: right;
+      }
+
+      .commission-data-amount {
+        font-size: 1.5rem;
+        color: colors(main-font);
+      }
+      .commission-data-title {
+        padding-top: .5em;
+        font-size: .625rem;
+        color: colors(assist-font);
+      }
+    }
+  }
+}
+
+.commission-list-content {
+  @extend %shadow;
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: #fff;
+
+  .commission-list-tab {
+    @extend %clearfix;
+    width: 100%;
+
+    .commission-list-btn {
+      display: block;
+      float: left;
+      padding: 1em 0;
+      width: 33%;
+      font-size: .75rem;
+      text-align: center;
+      color: colors(assist-font);
+      border-bottom: 1px solid #e2e2e2;
+
+      &:last-of-type {
+        width: 34%;
+      }
+    }
+    .commission-list-btn-active {
+      color: colors(main-font);
+      border-bottom-color: colors(main);
+    }
+  }
+
+  .commission-list {
+    display: none;
+    width: 100%;
+    font-size: .75rem;
+
+    th,td {
+      padding: 1em 0;
+      text-align: center;
+      color: colors(main-font);
+    }
+    th {
+      color: colors(assist-font);
+      background-color: colors(background);
+    }
+  }
+
+  .commission-rules {
+    margin: 0 .5rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #e2e2e2;
+  }
+}
+
+.commission-nav {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  .commission-nav-btn {
+    display: block;
+    float: left;
+    padding: 1em 0;
+    width: 25%;
+    font-size: .75rem;
+    text-align: center;
+    color: colors(assist-font);
+    background-color: #fff;
+    border-top: 1px solid #fff;
+  }
+  .commission-nav-btn-active {
+    color: colors(main-font);
+    border-top-color: colors(main);
+  }
+}
+
+/*佣金计划申请*/
+
+.commissionApply-container {
+  padding: 1.5rem 1rem 1rem;
+  background-color: colors(main);
+
+  .commissionApply-content {
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    position: relative;
+
+    .commissionApply-text {
+      padding-bottom: .5em;
+      font-size: .75rem;
+      line-height: 1.5;
+      color: colors(sub-font);
+    }
+    .commissionApply-img-01,
+    .commissionApply-img-02 {
+      display: block;
+      position: absolute;
+    }
+    .commissionApply-img-01 {
+      width: 5rem;
+      top: -1rem;
+      left: -2rem;
+    }
+    .commissionApply-img-02 {
+      width: 4rem;
+      bottom: -1rem;
+      right: -1rem;
+    }
+  }
+
+  .commissionApply-intro {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 4rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    font-size: .875rem;
+    line-height: 1.5;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+}
+
+.commissionApply-btn-wrap {
+  box-sizing: border-box;
+  padding: 1.5rem .5rem;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  .ui-btn {
+    margin-bottom: 0;
+  }
+}
+
+/*提现*/
+
+.commissionCash-amount {
+  padding: 1em 1rem;
+  font-size: .875rem;
+  color: colors(main-font);
+  background-color: colors(background);
+}
+
+/*赚佣金*/
+
+.commissionInvite-qrcode-title {
+  padding-top: 1rem;
+  font-size: .75rem;
+  color: #fff;
+  text-align: center;
+}
+.commissionInvite-qrcode {
+  box-sizing: border-box;
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+  width: 14em;
+  height: 14em;
+  background-image: url('../images/code-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 14em 14em;
+  background-size: 14em 14em;
+  position: relative;
+
+  canvas {
+    width: 12em;
+    height: 12em;
+    position: relative;
+    z-index: 40;
+  }
+
+  img {
+    display: block;
+    width: 3em;
+    height: 3em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+  }
+}
+.commissionInvite-code {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+  background-image: url('../images/commissionInvite-code-bg.png');
+  background-repeat: no-repeat;
+  background-position: center .2em;
+  -webkit-background-size: 8em auto;
+  background-size: 8em auto;
+}
+.commissionInvite-code-title {
+  padding-bottom: .5rem;
+  font-size: .625rem;
+  text-align: center;
+  color: #fff;
+}
+.commissionInvite-content {
+  @extend %shadow;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-bottom: 5rem;
+  width: 100%;
+  background-color: #fff;
+
+  .ui-list {
+    padding-left: 1.5em;
+
+    li {
+      position: relative;
+
+      &:after {
+        display: block;
+        content: "";
+        width: 1em;
+        height: 1em;
+        background-repeat: no-repeat;
+        -webkit-background-size: 1em 1em;
+        background-size: 1em 1em;
+        position: absolute;
+        top: .3em;
+        left: -1.5em;
+      }
+
+      &:nth-of-type(1):after {
+        background-image: url('../images/icon-png/message-gray.png');
+      }
+      &:nth-of-type(2):after {
+        background-image: url('../images/icon-png/phone-gray.png');
+      }
+    }
+  }
+}
+.commissionInvite-content-title {
+  padding-bottom: 1em;
+  font-size: 1rem;
+  color: #474747;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/*排名*/
+
+.commissionRank-top {
+  box-sizing: border-box;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+
+  .commissionRank-title {
+    font-size: .625rem;
+    color: colors(assist-font);
+  }
+  .commissionRank-ranking {
+    padding: .5em 0;
+    font-size: 2.1875rem;
+    color: colors(main);
+  }
+}
+
+/*工具包*/
+
+.commissionTools-item {
+  display: block;
+  margin-bottom: .5em;
+  width: 100%;
+
+  &:active {
+    .commissionTools-content {
+      .ui-btn {
+        color: #e74051;
+        border-color: #e74051;
+      }
+    }
+  }
+
+  .commissionTools-main {
+    @extend %clearfix;
+    box-sizing: border-box;
+    padding: 1em;
+
+    .commissionTools-img {
+      display: block;
+      float: left;
+      width: 3em;
+    }
+    .commissionTools-title {
+      @extend %overflow-clip;
+      float: left;
+      padding-left: .8em;
+      padding-top: 1rem;
+      width:78%;
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
+
+  .commissionTools-content {
+    @extend %clearfix;
+    box-sizing: border-box;
+    padding: .5em 1em;
+    width: 100%;
+    font-size: .75em;
+    color: colors(assist-font);
+    background-color: #fff;
+
+    span {
+      display: inline-block;
+      padding-top: .3em;
+    }
+    .ui-btn-link {
+      float: right;
+      margin: 0;
+      padding: .2em .8em;
+    }
+  }
+}
+.commissionTools-red {
+  .commissionTools-main {
+    background-color: colors(main);
+  }
+
+  &:active {
+    .commissionTools-main {
+      background-color: #e74051;
+    }
+  }
+}
+.commissionTools-blue {
+  .commissionTools-main {
+    background-color: #1da3f0;
+  }
+
+  &:active {
+    .commissionTools-main {
+      background-color: #1b9ad4;
+    }
+  }
+}
+.commissionTools-yellow {
+  .commissionTools-main {
+    background-color: #fbc65c;
+  }
+
+  &:active {
+    .commissionTools-main {
+      background-color: #fbbc3e;
+    }
+  }
+}

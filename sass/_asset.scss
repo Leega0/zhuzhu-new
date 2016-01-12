@@ -1,0 +1,115 @@
+.asset-top {
+  padding: 2rem 0;
+  color: #fff;
+  background-color: colors(main);
+
+  .asset-top-title {
+    font-size: .625rem;
+    text-align: center;
+  }
+  .asset-top-count {
+    padding-top: 1rem;
+    font-size: 3.125rem;
+    text-align: center;
+  }
+}
+
+.asset-content {
+  @extend %clearfix;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e2e2;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .asset-content-item {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 2rem;
+    width: 50%;
+
+    &:last-of-type {
+      padding-left: 2rem;
+      border-left: 1px solid #e2e2e2;
+    }
+    &:first-of-type {
+      padding-left: 2rem;
+      border-left: none;
+    }
+    .asset-content-title {
+      padding-bottom: .5em;
+      font-size: .625em;
+      color: colors(assist-font);
+      position: relative;
+    }
+    .asset-content-count {
+      font-size: 1.25rem;
+      color: colors(main-font);
+
+      span {
+        vertical-align: middle;
+      }
+    }
+    .asset-help {
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      vertical-align: middle;
+      background-image: url('../images/icon-png/help.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      -webkit-background-size: 1.25rem 2.5rem;
+      background-size: 1.25rem 2.5rem;
+      position: absolute;
+      top: -0.2rem;
+      right: .5rem;
+
+      &:active {
+        background-position: center bottom;
+      }
+    }
+  }
+}
+
+.assetInviteRate-btn {
+  margin-left: -4em;
+  margin-bottom: 0;
+  padding: .6em 0;
+  width: 8em;
+  font-size: .75rem;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+}
+
+.gift-wrap {
+  box-sizing: border-box;
+  padding: 1rem .5rem;
+  width: 100%;
+  background-color: colors(background);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.gift-img {
+  display: block;
+  float: left;
+  width: 3rem;
+  height: 3rem;
+}
+.gift-count {
+  float: left;
+  padding: 0 1rem;
+  font-size: .75rem;
+  line-height: 3rem;
+  color: colors(main-font);
+}
+.gift-btn {
+  float: left;
+  margin-bottom: 0;
+  margin-top: .5em;
+  padding: .8em 0;
+  width: 8em;
+  font-size: .75rem;
+}

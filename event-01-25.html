@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>过年天天乐</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  <link rel="stylesheet" type="text/css" href="style/lottery.css">
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="lottery-head-img">
+  <img src="images/event-01-25/lottery-head.png" alt="抽奖页面头部">
+</div>
+<!-- 隐藏抽奖次数 -->
+<span class="ui-hide" id="timeC">0</span>
+<!-- 抽奖箱体开始 -->
+<div class="lottery-draw-box-main" id="lottery">
+        <ul class="prize-lotter">
+          <li class="prize-lotter-item prize-number-1" id="167">
+              <img src="images/event-01-25/lottery-prize-1.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-2" id="163">
+              <img src="images/event-01-25/lottery-prize-2.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-3" id="171">
+              <img src="images/event-01-25/lottery-prize-3.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-8" id="162">
+              <img src="images/event-01-25/lottery-prize-8.png" alt="">
+          </li>
+          <li><a href="javascript:void(0)" id="lottery_btn"></a></li>
+          <li class="prize-lotter-item prize-number-4" id="164">
+              <img src="images/event-01-25/lottery-prize-4.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-7" id="165">
+              <img src="images/event-01-25/lottery-prize-7.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-6" id="170">
+              <img src="images/event-01-25/lottery-prize-6.png" alt="">
+          </li>
+          <li class="prize-lotter-item prize-number-5" id="166">
+              <img src="images/event-01-25/lottery-prize-5.png" alt="">
+          </li>
+      </ul>
+</div>
+<!-- 抽奖箱体end -->
+<!-- 中奖弹窗 -->
+<div class="lottery-award-dialog ui-pt10 ui-hide">
+    <p id="test_content">恭喜你中奖了</p>
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-dialog-btn-submit ui-btn-inline ui-btn-whiteBlack">确认</a>
+    </div>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/event-01-25-lottery.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>添加支行信息</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  <link rel="stylesheet" type="text/css" href="style/plugin.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="depositBranch-intro">您提供的银行卡，申请提现需要填写支行信息</div>
+
+  <div class="depositBranch-container">
+    <div class="depositBranch-info">
+      <p class="depositBranch-info-card">中国工商银行 尾号0350</p>
+      <p class="depositBranch-info-name">持卡人：大王</p>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-input-body ui-input-body-inline depositBranch-address">
+        <div class="ui-input-content">
+          <select id="province">
+            <option value="1">广东省</option>
+            <option value="2">安徽省</option>
+            <option value="3">山东省</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ui-input-body ui-input-body-inline depositBranch-address">
+        <div class="ui-input-content">
+          <select id="city">
+            <option>请选择省份</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-input-body">
+        <div class="ui-input-content">
+          <input type="text" class="ui-input" placeholder="支行名称"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-fixed-bottom">
+    <a href="javascript:void(0);" class="ui-btn ui-btn-main">领红包</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/common.js"></script>
+<script>
+  //选择插件调用
+  $('#province').tinySelect({
+    //默认显示文字
+    defaultText: '省份',
+    //选择后回调
+    onSelect: function(valueText, value) {
+      switch (valueText) {
+        case '广东省':
+          $('#city').empty().append('<option value="0">测试1</option><option value="1">测试12</option><option value="2">测试13</option>');
+          break;
+        case '安徽省':
+          $('#city').empty().append('<option value="0">测试2</option><option value="1">测试22</option><option value="2">测试23</option>');
+          break;
+        case '山东省':
+          $('#city').empty().append('<option value="0">测试3</option><option value="1">测试32</option><option value="2">测试33</option>');
+          break;
+      }
+      //重置
+      $('#city').tinySelect('reset');
+      console.log(value);
+    }
+  });
+  $('#city').tinySelect({
+    //默认显示文字
+    defaultText: '城市',
+    //选择后回调
+    onSelect: function(valueText, value) {
+
+    }
+  });
+</script>
+</html>

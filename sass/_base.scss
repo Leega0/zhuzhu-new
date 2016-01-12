@@ -1,0 +1,791 @@
+//基本公共样式
+.img-404 {
+  display: block;
+  margin: 3rem auto;
+  width: 70%;
+}
+.ui-error-img {
+  display: block;
+  margin: 3rem auto 2rem;
+  width: 80%;
+}
+.ui-error-btn {
+  margin: 0 auto !important;
+  width: 40% !important;
+}
+.ui-shadow {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+}
+
+.ui-title-red {
+  padding: .875rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: colors(main);
+}
+
+.ui-list {
+  font-size: .75rem;
+
+  li,
+  li p {
+    padding-bottom: .5em;
+    line-height: 1.5;
+    color: colors(main-font);
+  }
+}
+.ui-list-num,
+.ui-list-lower,
+.ui-list-none {
+  padding-left: 1rem;
+}
+
+.ui-list-num {
+  list-style: decimal;
+}
+.ui-list-lower {
+  list-style: lower-latin;
+}
+.ui-tips {
+  padding-bottom: 1rem;
+  font-size: .625rem;
+  color: colors(sub-font);
+  text-align: center;
+}
+
+//文字页
+
+.ui-text-top {
+  padding: 5.5rem .5rem .5rem;
+  background-color: colors(main);
+  background-image: linear-gradient(top, colors(main) 9em, colors(background) 9em, colors(background) 100%);
+  background-image: -moz-linear-gradient(top, colors(main) 9em, colors(background) 9em, colors(background) 100%);
+  background-image: -webkit-linear-gradient(top, colors(main) 9em, colors(background) 9em, colors(background) 100%);
+  position: relative;
+
+  .ui-text-imagery {
+    display: block;
+    width: 5em;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .ui-text-content {
+    box-sizing: border-box;
+    padding: 1rem 1rem 1.5rem;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+
+    .ui-text-title,
+    .ui-text-title-gray {
+      padding: 1em 0;
+      font-size: 1rem;
+    }
+    .ui-text-title {
+      color: colors(main);
+    }
+    .ui-text-title-gray {
+      color: colors(sub-font);
+    }
+    .ui-text {
+      padding-bottom: .5em;
+      font-size: .75em;
+      line-height: 1.5;
+      color: colors(main-font);
+    }
+  }
+}
+
+
+//列表页公共样式
+
+.ui-record-top {
+  padding-top: 2.5rem;
+  border-bottom: 1px solid colors(background);
+  background-color: #fff;
+  position: relative;
+
+  .ui-record-amount {
+    padding-bottom: 3rem;
+    font-size: 3.125rem;
+    text-align: center;
+    color: colors(main-font);
+  }
+  .ui-record-title {
+    padding-bottom: 1em;
+    font-size: .875rem;
+    text-align: center;
+    color: colors(sub-font);
+
+    a {
+      font-size: .875rem !important;
+    }
+  }
+}
+
+.ui-record {
+  margin: .5rem auto 2rem;
+  width: 80%;
+
+  th,td {
+    padding: .8em 0;
+    font-size: .75rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  th {
+    padding-bottom: 2em;
+    color: colors(assist-font);
+  }
+  td {
+    color: colors(main-font);
+  }
+}
+.ui-record-wide {
+  width: 100%;
+
+  th,td {
+    &:nth-of-type(1) {
+      text-align: right;
+    }
+    &:nth-of-type(3) {
+      text-align: left;
+    }
+  }
+}
+
+//底部固定样式
+.ui-fixed-bottom {
+  margin-left: -9.5em;
+  width: 19em !important;
+  position: fixed;
+  bottom: 2em;
+  left: 50%;
+
+  .ui-btn {
+    margin: 0;
+  }
+}
+.ui-fixed-bottom.ui-fixed-adaptive {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 2em auto;
+  padding: 0 .5rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+//公共按钮样式
+.ui-btn {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: .8em 0;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: .1em;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-box-shadow: 0 5px 5px rgba(150, 150, 150, .5);
+  box-shadow: 0 5px 5px rgba(150, 150, 150, .5);
+}
+.ui-btn-inline {
+  display: inline-block;
+  width: auto;
+  padding: 1em 1em;
+}
+//红色
+.ui-btn-main,
+.ui-btn-main:visited {
+  color: #fff;
+  background: colors(main);
+  border-color: colors(main);
+  -webkit-box-shadow: 0 5px 5px rgba(170, 16, 16, .5);
+  box-shadow: 0 5px 5px rgba(170, 16, 16, .5);
+}
+.ui-btn-main:active {
+  color: #fff;
+  background: #e53042;
+  border-color: #e53042;
+}
+//白底红字
+.ui-btn-white,
+.ui-btn-white:visited {
+  color: colors(main);
+  background: #fff;
+  border-color: #fff;
+}
+.ui-btn-white:active {
+  color: colors(main);
+  background: #e2e2e2;
+  border-color: #e2e2e2;
+}
+//白底红字
+.ui-btn-white-border,
+.ui-btn-white-border:visited {
+  color: colors(main);
+  background: #fff;
+  border-color: colors(main);
+}
+.ui-btn-white-border:active {
+  color: colors(main);
+  background: #e2e2e2;
+  border-color: colors(main);
+}
+//白底黑字
+.ui-btn-whiteBlack,
+.ui-btn-whiteBlack:visited {
+  color: colors(sub-font);
+  background: #fff;
+  border-color: #fff;
+}
+.ui-btn-whiteBlack:active {
+  color: #fff;
+  background: #e2e2e2;
+  border-color: #e2e2e2;
+}
+//白底黑字边框
+.ui-btn-whiteBlack-border,
+.ui-btn-whiteBlack-border:visited {
+  color: colors(sub-font);
+  background: #fff;
+  border-color: #c6c6c6;
+}
+.ui-btn-whiteBlack-border:active {
+  color: #fff;
+  background: #e2e2e2;
+  border-color: #c6c6c6;
+}
+//禁用
+.ui-btn-disable,
+.ui-btn-disable:visited {
+  color: #fff;
+  background: #c6c6c6;
+  border-color: #c6c6c6;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.ui-btn-disable:active {
+  color: #fff;
+  background: #c6c6c6;
+  border-color: #c6c6c6;
+}
+
+.ui-btn-link {
+  display: inline-block;
+  padding: .4em 1em;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3em;
+  text-align: center;
+  font-size: .75rem;
+}
+
+//白色
+.ui-btn-link-white,
+.ui-btn-link-white:visited {
+  color: #919191;
+  background: #fff;
+  border-color: #d1d1d1;
+}
+.ui-btn-link-white:active {
+  color: #919191;
+  background: #e2e2e2;
+  border-color: #d1d1d1;
+}
+//灰色
+.ui-btn-link-gray,
+.ui-btn-link-gray:visited {
+  color: #777;
+  background: #e2e2e2;
+  border-color: #d1d1d1;
+}
+.ui-btn-link-gray:active {
+  color: #ababab;
+  background: #eee;
+  border-color: #d1d1d1;
+}
+//蓝色
+.ui-btn-link-blue,
+.ui-btn-link-blue:visited {
+  color: #03a9f4;
+  background: none;
+  border-color: #03a9f4;
+}
+.ui-btn-link-blue:active {
+  color: #52c6fb;
+  background: none;
+  border-color: #52c6fb;
+}
+//选择
+.ui-btn-choose,
+.ui-btn-choose:visited {
+  color: colors(main) !important;
+  background: #fff;
+  border-color: colors(main);
+}
+.ui-btn-choose:active {
+  color: colors(main) !important;
+  background: #fff;
+  border-color: colors(main);
+}
+
+//输入样式
+.ui-input-wrap {
+  @extend %clearfix;
+  box-sizing: border-box;
+  padding: .75rem 0;
+  width: 100%;
+}
+.ui-label {
+  display: block;
+  float: left;
+  padding-top: .3rem;
+  width: 4.5rem;
+  font-size: .75em;
+  color: colors(assist-font);
+}
+.ui-input-body {
+  @extend %clearfix;
+  width: 100%;
+}
+.ui-input-body-inline {
+  display: inline-block;
+  width: 30%;
+}
+.ui-input-body-label {
+  float: left;
+  width: 75%;
+}
+.ui-input-content {
+  @extend %clearfix;
+  padding-bottom: .5em;
+  width: 100%;
+  border-bottom: 1px solid colors(assist-font);
+}
+.ui-input-focus {
+  border-bottom-color: colors('blue') !important;
+}
+.ui-input-wrong {
+  border-bottom-color: colors(wrong-font) !important;
+
+  .ui-input {
+    color: colors(wrong-font);
+  }
+  .ui-input:-moz-placeholder {
+    color: colors(wrong-font);
+  }
+  .ui-input::-webkit-input-placeholder {
+    color: colors(wrong-font);
+  }
+}
+.ui-input-content-btn {
+  float: left;
+  padding-top: 1rem;
+
+  width: 60%;
+}
+.ui-input-btn {
+  float: right;
+  width: 35%;
+  font-size: .875rem;
+}
+.ui-input {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  font-size: .875em;
+  color: colors(main-font);
+}
+.ui-input-unit {
+  display: block;
+  float: right;
+  padding-top: .1rem;
+  font-size: .875em;
+  color: colors(sub-font);
+}
+.ui-input-placeholder {
+  padding-top: .5em;
+  font-size: .625em;
+  line-height: 1.5;
+  color: colors(sub-font);
+}
+.ui-input-tips {
+  padding-top: .5em;
+  font-size: .625em;
+  line-height: 1.5;
+  color: colors(sub-font);
+
+  .ui-fr {
+    margin-top: .2em;
+  }
+}
+.ui-input-clear,
+.ui-input-help {
+  display: block;
+  float: right;
+  margin-top: .1rem;
+  margin-right: .5rem;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+}
+.ui-input-clear {
+  display: none;
+  background-image: url('../images/icon-png/input-clear.png');
+  -webkit-background-size: 1rem;
+  background-size: 1rem;
+}
+.ui-input-help {
+  background-image: url('../images/icon-png/help.png');
+  -webkit-background-size: 1rem 2rem;
+  background-size: 1rem 2rem;
+  background-position: center top;
+}
+.ui-input-help:active {
+  background-position: center bottom;
+}
+.ui-select {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: .875rem;
+  color: colors(main-font);
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-image: url('../images/icon-png/selectIcon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 1em;
+    background-size: 1em;
+    position: absolute;
+    bottom: -0.4em;
+    right: 0;
+  }
+}
+.ui-input-text {
+  padding-top: .2em;
+
+  font-size: .875rem;
+  line-height: 1rem;
+  color: #474747;
+}
+
+
+//选择控件样式
+
+.ui-checkbox-wrap {
+  @extend %clearfix;
+  padding: .5rem 0;
+}
+.ui-checkbox {
+  float: left;
+  margin-top: .25rem;
+  margin-right: .5rem;
+}
+.ui-checkbox-label {
+  float: left;
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.ui-checkbox-icon {
+  display: block;
+  float: left;
+  margin-top: .1rem;
+  margin-right: .5rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url('../images/icon-png/unchecked.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 1rem;
+  background-size: 1rem;
+}
+.ui-checkbox-icon-checked {
+  background-image: url('../images/icon-png/checked.png');
+}
+
+.ui-checkbox-more,
+.ui-checkbox-help {
+  display: block;
+  float: right;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  -webkit-background-size: 1rem;
+  background-size: 1rem;
+}
+
+.ui-checkbox-more {
+  background-image: url('../images/icon-png/selectIcon.png');
+}
+.ui-checkbox-help {
+  -webkit-background-size: 1rem 2rem;
+  background-size: 1rem 2rem;
+  background-image: url('../images/icon-png/help.png');
+  background-position: center top;
+
+  &:active {
+    background-position: center bottom;
+  }
+}
+
+//弹窗样式
+.ui-dialog-wrap {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+.ui-dialog {
+  display: block;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem 1rem;
+  width: 80%;
+  /*overflow: auto;
+  -webkit-overflow-scrolling: touch;*/
+  background-color: #fff;
+  border-radius: .2rem;
+  position: absolute;
+  z-index: 101;
+
+  .ui-dialog-title {
+    padding: 1rem 0 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: colors(main);
+  }
+  .ui-dialog-text {
+    padding: .5em 0;
+    font-size: .75rem;
+    line-height: 1.5;
+    color: colors(main-font);
+  }
+  .ui-label {
+    width: 4em;
+  }
+}
+.ui-dialog-alert {
+  padding-top: 2rem;
+}
+.ui-dialog-close,
+.ui-dialog-close-red {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url('../images/icon-png/close.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 1rem;
+  background-size: 1rem;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: 10;
+}
+.ui-dialog-close-red {
+  background-image: url('../images/icon-png/close-red.png');
+}
+.ui-dialog-btnWrap {
+  box-sizing: border-box;
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  padding-top: .5rem;
+  width: 100%;
+  border-top: 1px solid colors(border);
+
+  .ui-btn {
+    margin: 0;
+    font-size: .875rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .ui-btn-inline {
+    width: 46%;
+    margin-right: 5%;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+//loading样式
+.ui-loading {
+  display: block;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 17em;
+  left: 50%;
+  z-index: 101;
+}
+
+//遮罩样式
+.ui-shade,
+.ui-shade-white,
+.ui-shade-transparent {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 100;
+}
+.ui-shade-white {
+  background: rgba(255, 255, 255, .7);
+}
+
+/*Font color*/
+@each $color in map_keys($globalColor) {
+  .ui-font-#{$color} {
+    color: colors($color) !important;
+  }
+}
+
+.ui-fl {
+  float: left;
+}
+.ui-fr {
+  float: right;
+}
+
+.ui-container {
+  padding: .5rem;
+  position: relative;
+}
+
+.ui-link {
+  font-size: .75rem;
+  text-decoration: underline;
+}
+.ui-link-gray,
+.ui-link-gray:visited {
+  color: colors(sub-font);
+}
+.ui-link-gray:active {
+  color: colors(assist-font);
+}
+.ui-link-red,
+.ui-link-red:visited {
+  color: colors(main);
+}
+.ui-link-red:active {
+  color: #e53042;
+}
+
+.ui-gray {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.ui-corner {
+  border-radius: $globalRadius;
+  overflow: hidden;
+}
+.ui-nocorner {
+  border-radius: 0;
+}
+.ui-small {
+  font-size: .75em;
+}
+.ui-large {
+  font-size: 1.5em;
+}
+.ui-bold {
+  font-weight: bold;
+}
+.ui-align-center {
+  text-align: center !important;
+}
+.ui-align-left {
+  text-align: left !important;
+}
+.ui-align-right {
+  text-align: right !important;
+}
+.ui-valign-middle {
+  vertical-align: middle;
+}
+.ui-song {
+  font-family: Simsun;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.ui-mt5 {
+  margin-top: .5em;
+}
+.ui-mt10 {
+  margin-top: 1em;
+}
+.ui-mt15 {
+  margin-top: 1.5em;
+}
+.ui-mt20 {
+  margin-top: 2em;
+}
+.ui-mb5 {
+  margin-bottom: .5em;
+}
+.ui-mb10 {
+  margin-bottom: 1em;
+}
+.ui-mb15 {
+  margin-bottom: 1.5em;
+}
+.ui-mb20 {
+  margin-bottom: 2em;
+}
+.ui-pt5 {
+  padding-top: .5em;
+}
+.ui-pt10 {
+  padding-top: 1em;
+}
+.ui-pt15 {
+  padding-top: 1.5em;
+}
+.ui-pt20 {
+  padding-top: 2em;
+}
+.ui-pb5 {
+  padding-bottom: .5em;
+}
+.ui-pb10 {
+  padding-bottom: 1em;
+}
+.ui-pb15 {
+  padding-bottom: 1.5em;
+}
+.ui-pb20 {
+  padding-bottom: 2em;
+}
+.ui-bg-white {
+  background-color: #fff;
+}
+.ui-bg-main {
+  background-color: colors(main);
+}
+
+.ui-hide {
+  display: none;
+}
+
