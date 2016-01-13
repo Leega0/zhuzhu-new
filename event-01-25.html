@@ -19,10 +19,11 @@
 </head>
 <body>
 <div class="lottery-head-img">
-  <img src="images/event-01-25/lottery-head.png" alt="抽奖页面头部">
+  <img src="images/event-01-25/top-aimation-blue.png" class="lottery-animation-blue" alt="抽奖页面头部">
+  <img src="images/event-01-25/top-aimation-txt.png"  class="lottery-animation-text" alt="抽奖页面头部">
 </div>
 <!-- 隐藏抽奖次数 -->
-<span class="ui-hide" id="timeC">0</span>
+<span class="ui-hide" id="timeC">1</span>
 <!-- 抽奖箱体开始 -->
 <div class="lottery-draw-box-main" id="lottery">
         <ul class="prize-lotter">
@@ -54,18 +55,39 @@
       </ul>
 </div>
 <!-- 抽奖箱体end -->
+<!-- 中奖信息滚动 -->
+<div class="lottery-award-users ui-align-center">
+  <ul class="award-users-list">
+    <li>我中奖了1111111111111;</li>
+    <li>我没有中奖了222222222222222;</li>
+    <li>你中奖了333333333333333333333;</li>
+  </ul>
+  <a href="" class="ui-link ui-mt10 ui-mb10">我的获奖记录</a>
+</div>
+<!-- 活动规则 -->
+<div class="event-rule-box">
+    <div class="event-container">
+    <h3 class="ui-text-title ui-bold">活动规则</h3>
+    <p>活动对象：所有猪猪钱罐已注册用户</p>
+    <ul class="ui-list ui-list-num">
+          <li>活动期间所有注册用户均可参与抽奖，每个用户每天最多可抽奖1次；</li>
+          <li>红包、特权金将实时发放至用户账户；红包有效期：3天，每次存钱只能使用一个红包抵扣；</li>
+          <li>流量只支持移动、联通、电信用户充值，赠送的流量只在当月有效，抽奖成功后24小时内充值至用户注册手机号中，请确保手机号码状态保持正常；</li>
+          <li>实物奖品将在活动结束后20天内发放，中奖者中奖后请根据提示及时填写详细地址,逾期视为自动放弃奖品。</li>
+    </ul>
+    <p>如有疑问请联系微信在线客服或拨打<br>400-070-7663</p>
+  </div>
+</div>
 <!-- 中奖弹窗 -->
-<div class="lottery-award-dialog ui-pt10 ui-hide">
-    <p id="test_content">恭喜你中奖了</p>
+<div class="lottery-award-dialog ui-hide">
+    <p id="lottery_award_content">恭喜您，获得猪猪大礼包一个。请及时填写收货地址，工作人员将在活动结束后20天内寄送。</p>
     <div class="ui-dialog-btnWrap">
-      <a href="javascript:void(0);" class="ui-btn ui-dialog-btn-submit ui-btn-inline ui-btn-whiteBlack">确认</a>
+      <a href="javascript:void(0);" class="ui-btn ui-btn-whiteBlack ui-dialog-btn-submit">确认</a>
+      <a href="" class="ui-btn ui-hide ui-btn-whiteBlack" id="phy_award_btn">知道了</a>
     </div>
   </div>
 </body>
 <script src="js/lib/zepto.min.js"></script>
 <script src="js/common.js"></script>
 <script type="text/javascript" src="js/event-01-25-lottery.js"></script>
-<script type="text/javascript">
-
-</script>
 </html>

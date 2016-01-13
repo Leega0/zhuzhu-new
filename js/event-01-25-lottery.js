@@ -4,12 +4,12 @@ var $shadow = null,
         count = 1,
         startLotter,
         cycle = 0,
-        speed = 100;
-
+        speed = 70;
+//闪动阴影函数
     function goNext(number) {
         $shadow.appendTo($('.prize-number-'+number));
     }
-
+//抽奖动作函数
     function lotter() {
         if(count == 8) {
             count = 1;
@@ -31,17 +31,20 @@ var $shadow = null,
                 setTimeout(function() {
                 count = 1,cycle = 0,speed = 70;
                 isMove = false;
+                //如果中的是实物，则跳转中奖地址
              if(pPhy==1){
                     phyPox = $.dialog('.lottery-award-dialog', {
                       isBtn: false
                     });
-                    
-                    $('#phyPox').find('img').attr('src',pUrl);
-                    $('#phyPrize').html(prizeName);                    
+                    $(".ui-dialog").addClass('ui-dialog-success');
+                    $("#lottery_award_content").html(prizeName);
+
+                    $("#phy_award_btn").removeClass('ui-hide').attr('href',pUrl).html("知道了").prev("a").remove()                  
                 }else{
                     $.dialog('.lottery-award-dialog', {
                       isBtn: false
                     });
+                    $(".ui-dialog").addClass('ui-dialog-success')
                     }
                 }, 500);
                 return false;
@@ -73,7 +76,9 @@ var normalPox;
       $.dialog('.lottery-award-dialog', {
                       isBtn: false
                     });
-      $("#test_content").html("对不起，抽奖次数已用完")
+      $(".ui-dialog").addClass('ui-dialog-fail');
+      $("#lottery_award_content").html("您今天的抽奖机会已用完（每个用户每天限1次），明天再来。");
+      $(".ui-dialog-btn-submit").html("知道了");
       return ;
     }
     
@@ -97,11 +102,10 @@ var normalPox;
                id = data.pId;
                prizeName = data.prizeName;
                lotterNum = data.index;
-               pUrl = "/"+data.prizePUrl;
+               pUrl = '//'+data.prizePUrl;
                pPhy = data.prizePhy;
                prizePrice = data.prizePrice;
                
-               /* console.log(lotterNum); */
               if($shadow == null) {
               $('.prize-lotter-item:first').append('<div class="prize-lotter-shadow" id="prize-lotter-shadow"></div>');
               $shadow = $('#prize-lotter-shadow');
@@ -111,13 +115,38 @@ var normalPox;
             timeC.text(timeC.text()-1);
              
             }else if(code == "-1") {
-              layer.msg(data.errMsg);
+              alert(data.errMsg);
               return ;
             }else {
-              layer.msg("系统繁忙,请稍候再试..")
+              alert("系统繁忙,请稍候再试..")
               return ;
             }       
          }
       });
      }  
   });
+// 中奖用户信息滚动
+// function AutoScroll(obj){
+//     $(obj).find(".award-users-list").animate({
+//         marginLeft:-($(this).width())
+//     },10000,function(){
+//         $(this).css({marginLeft:"0px"}).find("li:first").appendTo(this);
+//     });
+// }
+// AutoScroll(".lottery-award-users","firstWidth")
+// setInterval('AutoScroll(".lottery-award-users")',1000);
+// var speed=10;
+// var tab=document.getElementById("demo");
+// var tab1=document.getElementById("demo1");
+// var tab2=document.getElementById("demo2");
+// tab2.innerHTML=tab1.innerHTML;
+// function Marquee(){
+// if(tab2.offsetWidth-tab.scrollLeft<=0)
+// tab.scrollLeft-=tab1.offsetWidth
+// else{
+// tab.scrollLeft++;
+// }
+// }
+// var MyMar=setInterval(Marquee,speed);
+// tab.onmouseover=function() {clearInterval(MyMar)};
+// tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
