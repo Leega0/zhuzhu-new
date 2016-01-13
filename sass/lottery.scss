@@ -94,20 +94,23 @@ body{
 	line-height: 1.8;
 	padding-top: 40%;
 }
+
 .lottery-award-users{
 	margin: 0 auto;
     width: 17.3rem;
 	overflow: hidden;
-	a{
-			display: inline-block;
-		}
+}
+.lottery-scroll{
+	overflow: hidden;
+	width:1000rem;
+	height:0.8rem;
+	text-align:left;
 }
 .award-users-list{
-	overflow: hidden;
+	float: left;
 	font-size: 0.75rem;
-	white-space: nowrap;
 	li{
-		display: inline-block;
+		float: left;
 		padding-right: 0.8rem;
 	}
 }
@@ -132,44 +135,5 @@ body{
 	}
 	h3{
 		color:#f12b71
-	}
-}
-// 我的获奖记录
-.lottery-record-bg{
-	background-image: url(../images/event-01-25/lottery-record-bg.png);
-	background-position:top;
-	background-repeat:no-repeat;
-	background-size:100% 100%;
-	margin-top:1rem;
-	min-height:26.6rem;
-}
-.my-award-record{
-	padding-top: 1rem;
-	box-sizing:border-box;
-	width:16.5rem;
-	margin:0 auto;
-}
-.record-head{
-	font-size: 1rem;
-	color:#777;
-	border-bottom:0.1rem solid #d1c0a5;
-	span{
-		text-align: center;
-		display: inline-block;
-		width: 49%;
-		padding: 0.5rem 0;
-	}
-}
-.record-list{
-	font-size: 0.75rem;
-	color:#474747;
-	padding-top: 0.5rem;
-	li{
-		padding:0.5rem 0;
-		span{
-			display: inline-block;
-			width: 49%;
-			text-align: center;
-		}
 	}
 }

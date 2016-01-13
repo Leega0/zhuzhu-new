@@ -126,27 +126,20 @@ var normalPox;
      }  
   });
 // 中奖用户信息滚动
-// function AutoScroll(obj){
-//     $(obj).find(".award-users-list").animate({
-//         marginLeft:-($(this).width())
-//     },10000,function(){
-//         $(this).css({marginLeft:"0px"}).find("li:first").appendTo(this);
-//     });
-// }
-// AutoScroll(".lottery-award-users","firstWidth")
-// setInterval('AutoScroll(".lottery-award-users")',1000);
-// var speed=10;
-// var tab=document.getElementById("demo");
-// var tab1=document.getElementById("demo1");
-// var tab2=document.getElementById("demo2");
-// tab2.innerHTML=tab1.innerHTML;
-// function Marquee(){
-// if(tab2.offsetWidth-tab.scrollLeft<=0)
-// tab.scrollLeft-=tab1.offsetWidth
-// else{
-// tab.scrollLeft++;
-// }
-// }
-// var MyMar=setInterval(Marquee,speed);
-// tab.onmouseover=function() {clearInterval(MyMar)};
-// tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+
+var speed=30;
+var scrollWrap=document.getElementById("award_list_wrap");
+var scrollOne=document.getElementById("award_list_origin");
+var scrollTwo=document.getElementById("awrad_list_clone");
+scrollTwo.innerHTML=scrollOne.innerHTML;
+function Marquee(){
+if(scrollTwo.offsetWidth-scrollWrap.scrollLeft<=0)
+scrollWrap.scrollLeft-=scrollOne.offsetWidth
+else{
+scrollWrap.scrollLeft++;
+}
+}
+// Marquee();
+ var MyMar=setInterval(Marquee,speed);
+
+
