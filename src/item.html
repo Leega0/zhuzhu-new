@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>存就送</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body>
+  <div class="ui-container">
+    <img class="item-img" src="images/item/item-iphone.jpg" alt=""/>
+
+    <div class="item-container">
+      <div class="item-money">
+        <p class="item-money-title">预存立送</p>
+        <p class="item-money-amount">￥<span>18288</span></p>
+      </div>
+
+      <p class="item-title">猪猪钱罐是怎么做到免费送的？</p>
+      <p class="item-text">猪猪钱罐通过把预存的资金进行购买债权的形式进行投资，到期产生的收益用来支付手机的费用。</p>
+
+      <p class="item-title">我预存的钱去了哪里？</p>
+      <p class="item-text">猪猪钱罐母公司信用宝是国内一流的互联网金融公司, 风控采用美国FICO评分模型,对债权进行风险评估,确保用户资金安全。</p>
+
+      <p class="item-title">如何保障我的资金安全？</p>
+      <p class="item-text">猪猪钱罐母公司信用宝是国内一流的互联网金融公司, 风控采用美国FICO评分模型,对债权进行风险评估,确保用户资金安全。</p>
+    </div>
+  </div>
+
+  <div class="item-btn-wrap">
+    <a id="item-get" href="javascript:void(0);" class="ui-btn ui-btn-main">我要拿</a>
+  </div>
+
+  <div class="item-dialog">
+    <i class="item-dialog-close"></i>
+    <table class="item-dialog-detail">
+      <colgroup>
+        <col width="25%"/>
+        <col width="75%"/>
+      </colgroup>
+      <tr>
+        <td class="item-dialog-title item-dialog-money-title item-dialog-border">
+          <p>存入金额</p>
+        </td>
+        <td class="item-dialog-money item-dialog-border">
+          <p><i id="item-money-temp">24000</i> 元</p>
+          <input type="hidden"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="item-dialog-title">
+          <p>商品名称</p>
+        </td>
+        <td class="item-dialog-content">
+          <p class="item-dialog-name"></p>
+          <input type="hidden"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="item-dialog-title">
+          <p>手机型号</p>
+        </td>
+        <td class="item-dialog-content">
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="Iphone6" data-type="type">Iphone6 (16G)</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="Iphone6Plus"  data-type="type">Iphone6 Plus(16G)</a>
+          <input type="hidden"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="item-dialog-title item-dialog-border">
+          <p>选择颜色</p>
+        </td>
+        <td class="item-dialog-content item-dialog-border">
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="银色" data-type="color">银色</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="深空灰色" data-type="color">深空灰色</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="金色" data-type="color">金色</a>
+          <input type="hidden"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="item-dialog-title item-dialog-border">
+          <p>选择期限</p>
+        </td>
+        <td class="item-dialog-content item-dialog-border">
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="3" data-type="periods">3个月</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="6" data-type="periods">6个月</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="12" data-type="periods">12个月</a>
+          <a href="javascript:void(0);" class="ui-btn-link ui-btn-link-white ui-btn-unchoose" data-value="24" data-type="periods">24个月</a>
+          <input type="hidden"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="item-dialog-title item-dialog-count" colspan="2">
+          <div class="clearfix">
+            <span>剩余：<i id="item-count-surplus">1000</i>份</span>
+            <div class="ui-fr">
+              <a id="item-count-minus" href="javascript:void(0);" class="ui-btn-link ui-btn-link-white">-</a>
+              <span id="item-count-temp" class="item-dialog-amount">1</span>
+              <a id="item-count-plus" href="javascript:void(0);" class="ui-btn-link ui-btn-link-white">+</a>
+              <input id="item-count" type="hidden"/>
+            </div>
+          </div>
+          <p class="ui-align-right">数量</p>
+        </td>
+      </tr>
+    </table>
+    <input type="hidden"/>
+
+    <div class="ui-container">
+      <a href="javascript:void(0);" class="ui-btn ui-btn-main">我要拿</a>
+    </div>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var items = [{
+    color: "银色",
+    depositAmount: 80000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 3,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 0,
+    fullname: 'Iphone6'
+  },{
+    color: "银色",
+    depositAmount: 100000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 6,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 0,
+    fullname: 'Iphone6'
+  },{
+    color: "银色",
+    depositAmount: 120000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 12,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 0,
+    fullname: 'Iphone6'
+  },{
+    color: "银色",
+    depositAmount: 240000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 24,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 0,
+    fullname: 'Iphone6'
+  },{
+    color: "金色",
+    depositAmount: 120000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 12,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 1,
+    fullname: 'Iphone6'
+  },{
+    color: "黑色",
+    depositAmount: 60000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 6,
+    perunit: "M",
+    type: "Iphone6",
+    defaults: 0,
+    fullname: 'Iphone6'
+  },{
+    color: "银色",
+    depositAmount: 80000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 3,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  },{
+    color: "银色",
+    depositAmount: 100000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 6,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  },{
+    color: "银色",
+    depositAmount: 120000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 12,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  },{
+    color: "银色",
+    depositAmount: 240000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 24,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  },{
+    color: "金色",
+    depositAmount: 120000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 12,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  },{
+    color: "黑色",
+    depositAmount: 60000,
+    goodsId: 0,
+    id: 10002001,
+    name: "",
+    periods: 6,
+    perunit: "M",
+    type: "Iphone6Plus",
+    defaults: 0,
+    fullname: 'Iphone6Plus'
+  }];
+
+  var attrs = [{"name": "type", "label": "选择型号"},{"name": "color", "label": "选择颜色"},{"name":"periods","label":"选择期限"}];
+
+  $.item.init(1, items, attrs, 3);
+</script>
+</html>

@@ -1,0 +1,3 @@
+*.cfg
+.idea/*
+node_modules/*

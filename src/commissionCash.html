@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>申请提现</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+
+  <div class="deposit-container">
+    <div class="ui-input-wrap">
+      <div class="ui-input-body">
+        <div class="ui-input-content">
+          <input type="text" class="ui-input" placeholder="可存金额100～4000元"/>
+          <span class="ui-input-unit">元</span>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+
+        <p class="ui-input-placeholder">猪猪根据您当前日期距离到期日期的长短计算收益，越早存入，收益越高。</p>
+      </div>
+    </div>
+
+    <div class="deposit-pay clearfix">
+      <img class="deposit-bank-img" src="images/bank/cmb.png" alt=""/>
+      <span class="deposit-bank-name">招商银行 尾号9987</span>
+    </div>
+  </div>
+
+  <div class="ui-fixed-bottom">
+    <p class="deposit-tips">
+      <img src="images/icon-png/shield.png" alt=""/>
+      <span>第三方资金托管，同卡进出，保障资金安全</span>
+    </p>
+    <a id="test" href="javascript:void(0);" class="ui-btn ui-btn-main">确 认</a>
+  </div>
+
+  <!--确认弹窗-->
+  <div class="commissionCash-confirm-dialog ui-pt10 ui-hide">
+    <ul class="ui-list ui-list-num">
+      <li>佣金可在存钱时进行全额抵扣；</li>
+      <li>如存入金低于可用佣金，则最多只能抵扣存入金额。</li>
+    </ul>
+
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-dialog-btn-submit ui-btn-inline ui-btn-whiteBlack">申请提现</a>
+      <a href="javascript:void(0);" class="ui-btn ui-dialog-btn-submit ui-btn-inline ui-btn-whiteBlack">去钱罐存钱</a>
+    </div>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+
+  var $test = $('#test');
+
+  $test.on('click', function() {
+    $.dialog('.commissionCash-confirm-dialog', {
+      isBtn: false
+    });
+  });
+</script>
+</html>

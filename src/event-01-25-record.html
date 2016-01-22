@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>过年天天乐</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  <style>
+  body{
+	background-color: #f12b71;
+}
+.lottery-record-bg {
+  background-image: url(images/event-01-25/lottery-record-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 1rem 0;
+  min-height: 26.6rem; }
+
+.my-award-record {
+  padding: 1rem 0;
+  box-sizing: border-box;
+  width: 16.5rem;
+  margin: 0 auto; }
+
+.record-head {
+  font-size: 1rem;
+  color: #777;
+  border-bottom: 0.1rem solid #d1c0a5;
+  overflow: hidden; }
+  .record-head span {
+    text-align: center;
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 0.5rem 0; }
+.scroll-container{
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 25rem;
+}
+.record-list {
+  font-size: 0.75rem;
+  color: #474747;
+  padding-top: 0.5rem; }
+  .record-list li {
+    padding: 0.5rem 0; }
+    .record-list li span {
+      display: inline-block;
+      width: 49%;
+      text-align: center; }
+
+  </style>
+</head>
+<body>
+<!-- 我的获奖记录 -->
+<div class="lottery-record-bg">
+<div class="my-award-record">
+    <div class="record-head">
+      <span>奖项</span>
+      <span>时间</span>
+    </div>
+    <div class="scroll-container" id="scrollable">
+    <ul class="record-list">
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>100M流量</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+      <li>
+          <span>1000元特权金</span>
+          <span>2016-1-10 15:01:20</span>
+      </li>
+    </ul>
+    </div>
+</div>
+</div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+var ScrollFix = function(elem) {
+  var startY, startTopScroll;
+  elem = elem || document.querySelector(elem);
+  if(!elem)
+    return;
+  elem.addEventListener('touchstart', function(event){
+    startY = event.touches[0].pageY;
+    startTopScroll = elem.scrollTop; 
+    if(startTopScroll <= 0)
+      elem.scrollTop = 1;
+    if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+      elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+  }, false);
+};
+var scrollable = document.getElementById("scrollable");
+    new ScrollFix(scrollable);
+  </script>
+</html>

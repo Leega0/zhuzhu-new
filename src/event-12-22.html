@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>猪猪钱罐</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  <style>
+    body {
+      background: #108c70;
+    }
+    .event-container {
+      padding: .5rem;
+      background-image: url('images/event-12-22/event-bg.jpg');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    .event-slogan {
+      display: block;
+      margin-bottom: 16rem;
+      width: 100%;
+    }
+    .event-content-img {
+      display: block;
+      width: 100%;
+      position: relative;
+      z-index: 11;
+    }
+    .event-btn {
+      display: block;
+      margin: .5rem 0;
+      width: 100%;
+      height: 4rem;
+      background-image: url('images/event-12-22/event-btn.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      -webkit-background-size: auto 8rem;
+      background-size: auto 8rem;
+      position: relative;
+      z-index: 11;
+    }
+    .event-btn:active {
+      background-position: center bottom;
+    }
+
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="event-container">
+    <img src="images/event-12-22/event-slogan.png" alt="" class="event-slogan">
+
+    <img src="images/event-12-22/event-content.jpg" alt="" class="event-content-img">
+
+    <a href="#" class="event-btn"></a>
+  </div>
+
+  <canvas id="canvas"></canvas>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/event-12-22-animation.js"></script>
+</html>

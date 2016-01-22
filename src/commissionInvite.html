@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>佣金计算规则</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-main">
+  <p class="commissionInvite-qrcode-title">我的专属推荐二维码，邀请好友扫一扫</p>
+
+  <div id="qrcode" class="commissionInvite-qrcode">
+    <img src="images/code.jpg" alt=""/>
+  </div>
+
+  <div class="commissionInvite-code">586126</div>
+  <p class="commissionInvite-code-title">您的专属推荐码</p>
+
+  <div class="ui-container">
+    <div class="commissionInvite-content">
+      <p class="commissionInvite-content-title clearfix">您可以通过以下两种方式赚取佣金</p>
+
+      <ul class="ui-list">
+        <li>分享当前页面到朋友圈或发送给好友，好友通过您分享的推广链接注册成功,即算您成功推荐一个。</li>
+        <li>面对面让用户扫描上面的二维码。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="commission-nav clearfix">
+    <a href="#" class="commission-nav-btn">报表</a>
+    <a href="#" class="commission-nav-btn commission-nav-btn-active">赚佣金</a>
+    <a href="#" class="commission-nav-btn">工具箱</a>
+    <a href="#" class="commission-nav-btn">我的排名</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  $('#qrcode').qrcode("http://www.cnblogs.com/xiyangbaixue");
+</script>
+</html>

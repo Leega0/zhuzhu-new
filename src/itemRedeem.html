@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>提前赎回</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="itemRedeem-title">iphone6 16G 公开版</div>
+  
+  <div class="itemRedeem-container">
+    <div class="itemRedeem-count clearfix">
+      <span class="itemRedeem-label">数量：</span>
+      <div class="itemRedeem-control">
+        <a id="depositMinus" href="javascript:void(0);" class="ui-btn-link ui-btn-link-white">-</a>
+        <span id="depositAmount" class="itemRedeem-amount">1</span>
+        <a id="depositPlus" href="javascript:void(0);" class="ui-btn-link ui-btn-link-white">+</a>
+      </div>
+    </div>
+  
+    <div class="itemRedeem-text">
+      <span class="itemRedeem-label">已存入金额：</span>
+      <span class="itemRedeem-detail">17000元</span>
+    </div>
+    <div class="itemRedeem-text">
+      <span class="itemRedeem-label">应计利息：</span>
+      <span class="itemRedeem-detail">17000元</span>
+    </div>
+    <div class="itemRedeem-text">
+      <span class="itemRedeem-label">商品原价：</span>
+      <span class="itemRedeem-detail">17000元</span>
+    </div>
+    <div class="itemRedeem-text">
+      <span class="itemRedeem-label">提前赎回手续费：</span>
+      <span class="itemRedeem-detail">17000元</span>
+    </div>
+  
+    <div class="itemRedeem-total">
+      <p class="itemRedeem-money">
+        <span class="ui-fl"><a class="ui-link ui-link-gray" href="#">可赎回明细</a></span>
+        <span>可赎回金额：<span class="ui-font-main">11654.23</span>元</span>
+      </p>
+    </div>
+  </div>
+  
+  <div class="ui-fixed-bottom">
+    <p class="ui-small ui-align-center ui-pb10"><a class="ui-link ui-link-gray" href="#">提前赎回规则</a></p>
+    <a href="javascript:void(0);" class="ui-btn ui-btn-main">申请赎回</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $plus = $('#depositPlus'),
+      $minus = $('#depositMinus'),
+      $amount = $('#depositAmount'),
+      limit = 10;
+
+  $plus.on('click', function() {
+    var amount = Number($amount.text());
+    if(amount >= limit) {
+      return;
+    } else {
+      amount++;
+    }
+
+    $amount.empty().text(amount);
+  });
+
+  $minus.on('click', function() {
+    var amount = Number($amount.text());
+    amount == 1 ? amount = 1: amount--;
+    $amount.empty().text(amount);
+  });
+</script>
+</html>

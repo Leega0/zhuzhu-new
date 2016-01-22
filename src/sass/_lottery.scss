@@ -1,0 +1,126 @@
+.lottery-container{
+	background-color: #fff;
+	@extend %shadow;
+	padding-bottom: 1.25rem;
+	.lottery-title{
+		padding:1rem 0;
+		font-size: 0.875rem;
+		color: colors(main-font);
+	}
+}
+.lottery-border-bg{
+	margin:0 auto;
+	height:20.9rem;
+	max-width:19rem;
+	background-image:url(../images/lottery/lottery-bg.png);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	overflow: hidden;
+}
+.lottery-biling-bg{
+		width: 97.5%;
+		height: 91%;
+		margin: 0.5rem auto;
+		overflow: hidden;
+		 background-image:url(../images/lottery/lottery-border.png);
+		 background-repeat:no-repeat;
+		 background-size:100% 100%;
+		 animation:biling ease-in-out 2s infinite
+	}
+.prize-lotter{
+	margin:0 auto;
+	margin-top: 1.3rem;
+	width:16.5rem;
+	@extend %clearfix;
+    box-sizing:border-box;
+	li{
+		float: left;
+		box-sizing:content-box;
+		width: 32.3%;
+		&:nth-child(3n+3){
+			padding-right: 0;
+		}
+		&:nth-child(5){
+			padding-left:0;
+			padding-right: 0;
+			width: 33%;
+		}
+		height: 5.315rem;
+		padding: 0.1rem;
+		position: relative;
+		img,a{
+			display: block;
+			width: 100%;
+			height: 100%
+		}
+	}
+}
+.lottery_btn{
+	background-image:url(../images/lottery/lottery-btn.png);
+	background-repeat: no-repeat;
+	background-size:contain;
+	background-position:center;
+	&:active{
+		background-image:url(../images/lottery/lottery-btn-active.png)
+	}
+}
+@keyframes biling{
+	0%{
+		background-image:none;
+	}
+	25%{
+		background-image:url(../images/lottery/lottery-border-white.png);
+	}
+	50%{
+		background-image:none;
+	}
+	100%{
+		background-image:url(../images/lottery/lottery-border-yellow.png);
+	}
+}
+
+.prize-lotter-shadow{
+	background-color: #000;
+	width:100%;
+	height:100%;
+	opacity:0.3;
+	position: absolute;
+	top:0;
+	border-radius:0.4rem;
+}
+.lottery-head-img{
+	text-align:center;
+	img{
+		width: 50%;
+		display: inline-block;
+	}
+}
+#lottery_award_content{
+	font-size: 0.7rem;
+	padding-top: 1rem;
+	line-height: 1.8;
+}
+// 资源加载等待
+#loading {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: rgba(255,255,255,0.5);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	img {
+		display: block;
+		margin-top: -60px;
+		margin-left: -60px;
+		width: 120px;
+		height: 120px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}

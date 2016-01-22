@@ -1,0 +1,42 @@
+//Clear float
+%clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%overflow-clip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+%shadow {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+}
+
+//全局常用颜色变量
+$globalColor : (
+  "white": #fff,
+  "yellow": #fdba43,
+  "green": #43c996,
+  "blue": #46b8f4,
+  "lightPurple": #828df2,
+  "purple": #d768c3,
+  "main": #ff4a5c,
+  "assist": #444a58,
+  "main-font": #474747,
+  "sub-font": #777,
+  "assist-font": #ababab,
+  "wrong-font": #ff4a5c,
+  "border": #e2e2e2,
+  "background": #f1f1f1
+);
+
+$globalRadius: .3rem !default;

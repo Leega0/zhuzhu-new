@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>身份信息确认</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="deposit-name clearfix">
+    <span>请绑定持卡人本人的银行卡</span>
+  </div>
+
+  <div class="deposit-container">
+    <div class="ui-input-wrap">
+      <div class="ui-label">持 卡 人</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input id="test" type="text" class="ui-input" placeholder="请输入姓名"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+
+      <p class="ui-input-placeholder"></p>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-label">银 行 卡</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input id="bankCard" type="tel" class="ui-input"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+
+        <p class="ui-input-placeholder">仅支持大陆地区的借记卡，不支持信用卡</p>
+
+        <p class="ui-input-tips">仅支持大陆地区的借记卡，不支持信用卡</p>
+
+        <p class="ui-input-tips ui-font-wrong-font">工商银行，每日限存1万</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-fixed-bottom">
+    <a href="javascript:void(0);" class="ui-btn ui-btn-main">确 认</a>
+    <p class="ui-small ui-align-center ui-pt10 ui-font-sub-font">仅支持大陆地区的借记卡，不支持信用卡</p>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $bankCard = $('#bankCard');
+
+  $bankCard.bankInput();
+
+  var $test = $('#test');
+  $test.on('blur', function() {
+    $(this).wrongInput('姓名错误');
+  });
+</script>
+</html>

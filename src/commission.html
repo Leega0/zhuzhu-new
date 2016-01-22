@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>佣金计划</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body>
+  <div class="commission-container">
+    <div class="commission-item">
+      <div class="commission-mine">
+        <p class="commission-mine-title">我的佣金(元)</p>
+        <p class="commission-mine-amount">99999</p>
+      </div>
+
+      <a href="#" class="commission-cash ui-btn ui-btn-whiteBlack-border">提现</a>
+    </div>
+
+    <div class="commission-item">
+      <h3 class="commission-item-title">今日数据</h3>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">3090</p>
+        <p class="commission-data-title">点击(次)</p>
+      </div>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">30</p>
+        <p class="commission-data-title">注册数(人)</p>
+      </div>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">309110</p>
+        <p class="commission-data-title">投资额(元)</p>
+      </div>
+    </div>
+
+    <div class="commission-item">
+      <h3 class="commission-item-title">累计数据</h3>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">3090</p>
+        <p class="commission-data-title">点击(次)</p>
+      </div>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">30</p>
+        <p class="commission-data-title">注册数(人)</p>
+      </div>
+
+      <div class="commission-data-item">
+        <p class="commission-data-amount">309110.00</p>
+        <p class="commission-data-title">投资额(元)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-container">
+    <div class="commission-list-content">
+      <div class="commission-list-tab">
+        <a href="javascript:void(0);" class="commission-list-btn">昨日</a>
+        <a href="javascript:void(0);" class="commission-list-btn">最近7天</a>
+        <a href="javascript:void(0);" class="commission-list-btn">总计</a>
+      </div>
+
+      <table class="commission-list">
+        <colgroup>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+        </colgroup>
+
+        <tr>
+          <th>层级</th>
+          <th>注册人数</th>
+          <th>投资金额</th>
+          <th>预期佣金</th>
+        </tr>
+        
+        <tr>
+          <td>1级</td>
+          <td>9</td>
+          <td>3000</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>2级</td>
+          <td>9</td>
+          <td>30300</td>
+          <td>12</td>
+        </tr>
+      </table>
+
+      <table class="commission-list">
+        <colgroup>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+        </colgroup>
+
+        <tr>
+          <th>层级</th>
+          <th>注册人数</th>
+          <th>投资金额</th>
+          <th>预期佣金</th>
+        </tr>
+
+        <tr>
+          <td>1级</td>
+          <td>10</td>
+          <td>3000</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>2级</td>
+          <td>9</td>
+          <td>30300</td>
+          <td>12</td>
+        </tr>
+      </table>
+
+      <table class="commission-list">
+        <colgroup>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+          <col width="25%"/>
+        </colgroup>
+
+        <tr>
+          <th>层级</th>
+          <th>注册人数</th>
+          <th>投资金额</th>
+          <th>预期佣金</th>
+        </tr>
+
+        <tr>
+          <td>1级</td>
+          <td>11</td>
+          <td>3000</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>2级</td>
+          <td>9</td>
+          <td>30300</td>
+          <td>12</td>
+        </tr>
+      </table>
+
+      <div class="commission-rules">
+        <a href="#" class="ui-link ui-link-gray">佣金计算规则</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="commission-nav clearfix">
+    <a href="#" class="commission-nav-btn commission-nav-btn-active">报表</a>
+    <a href="#" class="commission-nav-btn">赚佣金</a>
+    <a href="#" class="commission-nav-btn">工具箱</a>
+    <a href="#" class="commission-nav-btn">我的排名</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $listBtn = $('.commission-list-btn'),
+      $list = $('.commission-list');
+
+  $(function() {
+    $listBtn.eq(0).trigger('click');
+  });
+
+  $listBtn.on('click', function() {
+    var _self = $(this);
+    var index = _self.index();
+
+    _self.addClass('commission-list-btn-active').siblings('.commission-list-btn-active').removeClass('commission-list-btn-active');
+    $list.css('display', 'none').eq(index).css('display', 'table');
+  });
+</script>
+</html>
