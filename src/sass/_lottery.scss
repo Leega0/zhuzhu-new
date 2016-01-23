@@ -25,7 +25,7 @@
 		 background-image:url(../images/lottery/lottery-border.png);
 		 background-repeat:no-repeat;
 		 background-size:100% 100%;
-		 animation:biling ease-in-out 2s infinite
+		 animation:biling linear 1.6s infinite;
 	}
 .prize-lotter{
 	margin:0 auto;
@@ -74,8 +74,11 @@
 	50%{
 		background-image:none;
 	}
-	100%{
+	75%{
 		background-image:url(../images/lottery/lottery-border-yellow.png);
+	}
+	100%{
+		background-image: none;
 	}
 }
 
