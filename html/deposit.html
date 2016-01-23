@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>存钱</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+
+  <div class="deposit-maintain">招商银行接口维护中，请稍候再试！</div>
+
+  <div class="deposit-name clearfix">
+    <p>
+      <span>钱罐名称(4000元)</span>
+      <span class="ui-fr">存入: <i>800元</i></span>
+    </p>
+    <p>数量:</p>
+  </div>
+
+  <div class="deposit-container">
+    <div class="ui-input-wrap">
+      <div class="ui-input-body">
+        <div class="ui-input-content">
+          <input type="text" class="ui-input" placeholder="可存金额100～4000元"/>
+          <span class="ui-input-unit">元</span>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="deposit-pay clearfix">
+      <img class="deposit-bank-img" src="images/bank/cmb.png" alt=""/>
+      <span class="deposit-bank-name">招商银行 尾号9987</span>
+      <span class="deposit-pay-amount">实际支付 <span class="ui-font-main">4000</span> 元</span>
+    </div>
+
+    <div class="ui-checkbox-wrap">
+      <input id="checked01" checked="checked" class="ui-checkbox" type="checkbox"/>
+      <span class="ui-checkbox-label">使用红包 <span class="ui-font-main">10</span> 元</span>
+      <a href="javascript:void(0);" class="ui-checkbox-more"></a>
+    </div>
+
+    <div class="ui-checkbox-wrap">
+      <input id="checked02" class="ui-checkbox" type="checkbox"/>
+      <span class="ui-checkbox-label">使用特权金收益 <span class="ui-font-main">10</span> 元</span>
+      <a id="prizeHelpBtn" href="javascript:void(0);" class="ui-checkbox-help"></a>
+    </div>
+
+    <div class="ui-checkbox-wrap">
+      <input id="checked03" class="ui-checkbox" type="checkbox"/>
+      <span class="ui-checkbox-label">使用佣金 <span class="ui-font-main">10</span> 元</span>
+      <a id="commissionHelpBtn" href="javascript:void(0);" class="ui-checkbox-help"></a>
+    </div>
+
+    <p class="ui-align-right ui-small">累计使用：11元</p>
+  </div>
+
+  <div class="ui-fixed-bottom">
+    <p class="deposit-tips">
+      <img src="images/icon-png/shield.png" alt=""/>
+      <span>账户资金交易安全由阳光财产保险股份有限公司承保</span>
+    </p>
+    <a id="test" href="javascript:void(0);" class="ui-btn ui-btn-main">存 钱</a>
+  </div>
+
+
+  <!--红包列表弹窗-->
+  <div class="deposit-gift">
+    <div class="deposit-gift-top">
+      <img src="images/deposit-gift-img.png" alt=""/>
+    </div>
+
+    <div class="deposit-gift-containr">
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+
+      <a href="javascript:void(0);" class="deposit-gift-item">
+        <span>10 元(活动红包)</span>
+        <span class="ui-fr">有效期至2015-10-10</span>
+      </a>
+    </div>
+  </div>
+
+  <!--特权金使用说明弹窗-->
+  <div class="deposit-prize-help ui-hide">
+    <h3 class="ui-dialog-title">特权金收益使用说明</h3>
+    <ul class="ui-list ui-list-num">
+      <li>特权金收益使用无时间限制；</li>
+      <li>
+        <p>按存入资金的1%进行抵扣。</p>
+        <p>如: 存入100元，可使用特权金收益为1元</p>
+      </li>
+    </ul>
+  </div>
+
+  <!--佣金使用说明弹窗-->
+  <div class="deposit-commission-help ui-hide">
+    <h3 class="ui-dialog-title">佣金使用说明</h3>
+    <ul class="ui-list ui-list-num">
+      <li>佣金可在存钱时进行全额抵扣；</li>
+      <li>如存入金低于可用佣金，则最多只能抵扣存入金额。</li>
+    </ul>
+  </div>
+
+  <!--身份认证弹窗-->
+  <div class="deposit-certify-dialog ui-hide">
+    <div class="deposit-certify-top">
+      <h3 class="deposit-certify-title">身份信息</h3>
+      <p class="deposit-certify-text">为保障您的资金安全，必须准确填写您的个人信息</p>
+      <p class="deposit-certify-text">目前仅支持大陆用户注册，身份证尾号为X的用户,最后一位可不填,系统为您自动填写。</p>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-label">姓名</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input type="text" class="ui-input"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-input-wrap">
+      <div class="ui-label">身份证</div>
+
+      <div class="ui-input-body ui-input-body-label">
+        <div class="ui-input-content">
+          <input type="tel" class="ui-input" maxlength="18"/>
+          <a href="javascript:void(0);" class="ui-input-clear"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--银行卡支持弹窗-->
+  <div class="deposit-bank-dialog ui-hide">
+    <div class="deposit-bank-top">
+      <img class="deposit-bank-imagery" src="images/imagery/imagery-03.png" alt=""/>
+      <p class="deposit-bank-text">抱歉，您输入的银行卡不支持</p>
+    </div>
+
+    <div class="deposit-bank-content clearfix">
+      <h3 class="deposit-bank-title">现支持以下银行</h3>
+      <p class="deposit-bank-item">工商银行</p>
+      <p class="deposit-bank-item">民生银行</p>
+      <p class="deposit-bank-item">农业银行</p>
+      <p class="deposit-bank-item">建设银行</p>
+      <p class="deposit-bank-item">中国银行</p>
+      <p class="deposit-bank-item">浦发银行</p>
+      <p class="deposit-bank-item">招商银行</p>
+      <p class="deposit-bank-item">平安银行</p>
+      <p class="deposit-bank-item">光大银行</p>
+      <p class="deposit-bank-item">兴业银行</p>
+      <p class="deposit-bank-item">华夏银行</p>
+      <p class="deposit-bank-item">储蓄银行</p>
+      <p class="deposit-bank-item">中信银行</p>
+      <p class="deposit-bank-item">广发银行</p>
+      <p class="deposit-bank-item">招商银行</p>
+    </div>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.min.js"></script>
+<script>
+  var $more = $('.ui-checkbox-more'),
+      $prizeHelpBtn = $('#prizeHelpBtn'),
+      $commissionHelpBtn = $('#commissionHelpBtn');
+
+  $more.on('click', function() {
+    $.dialog('.deposit-gift', {
+      isBtn: false,
+      redClose: true,
+      submitCallback: function() {
+        alert('确认回调！');
+      }
+    });
+  });
+
+  $prizeHelpBtn.on('click', function() {
+    $.dialog('.deposit-prize-help');
+  });
+
+  $commissionHelpBtn.on('click', function() {
+    $.dialog('.deposit-commission-help');
+  });
+
+  var $test = $('#test');
+
+  $test.on('click', function() {
+    $.dialog('.deposit-certify-dialog', {
+      redClose: true,
+      isBtn: true
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,151 @@
+body{
+	background-color: #f12b71;
+}
+.lottery_btn{
+	background-image:url(../images/event-01-25/lottery-btn.png);
+	background-repeat: no-repeat;
+	background-size:contain;
+	background-position:center;
+	&:active{
+		background-image:url(../images/event-01-25/lottery-btn-actived.png)
+	}
+}
+.lottery-head-img{
+	img{
+		display: block;
+		width: 100%;
+		&.lottery-animation-text{
+			position: absolute;
+			z-index: 9;
+			top:-0.5rem;
+			animation:mytop ease-in-out 2.3s infinite
+		}
+	}
+}
+@keyframes mytop{
+	50%{
+		top: 0;
+	}
+	100%{
+		top: -0.5rem
+	}
+}
+.prize-lotter{
+	margin:1rem auto;
+	width:17.3rem;
+	height:16.5rem;
+    box-sizing:border-box;
+    padding: 0.36rem;
+	background-color: #cd0849;
+	li{
+		float: left;
+		width: 5.3rem;
+		height: 5.05rem;
+		margin: 0.1rem;
+		position: relative;
+		img,a{
+			display: block;
+			width: 100%;
+			height: 100%
+		}
+	}
+}
+.prize-lotter-shadow{
+	background-color: #fff;
+	width:100%;
+	height:100%;
+	opacity:0.5;
+	position: absolute;
+	top:0;
+	border-radius:0.4rem;
+}
+.ui-dialog-success{
+	background-image: url(../images/event-01-25/dailog-success-bg.png);
+	background-position:top;
+	background-repeat:no-repeat;
+	background-size:contain;
+	.ui-dialog-close{
+		background-image: url(../images/event-01-25/btn-close-red.png) !important;
+	}
+}
+.ui-dialog-fail{
+	background-image: url(../images/event-01-25/dailog-fail-bg.png);
+	background-position:top;
+	background-repeat:no-repeat;
+	background-size:contain;
+	.ui-dialog-close{
+		background-image: url(../images/event-01-25/btn-close-black.png) !important;
+	}
+}
+#lottery_award_content{
+	font-size: 0.7rem;
+	line-height: 1.8;
+	padding-top: 40%;
+}
+
+.lottery-award-users{
+	margin: 0 auto;
+    width: 17.3rem;
+	overflow: hidden;
+}
+.lottery-scroll{
+	overflow: hidden;
+	width:1000rem;
+	height:0.8rem;
+	text-align:left;
+}
+.award-users-list{
+	float: left;
+	font-size: 0.75rem;
+	li{
+		float: left;
+		padding-right: 0.8rem;
+	}
+}
+.event-rule-box{
+	background-image: url(../images/event-01-25/lottery-bottom-bg.png);
+	background-position:top;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+.event-container{
+	width:80%;
+	padding:2rem 0;
+	margin:0 auto;
+	font-size: 0.75rem;
+	color:#474747;
+	h3{
+		padding-bottom: 0.75rem;
+	}
+	p{
+		padding: 0.75rem 0;
+		line-height: 1.5;
+	}
+	h3{
+		color:#f12b71
+	}
+}
+
+#loading {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0,0,0,0.5);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	img {
+		display: block;
+		margin-top: -60px;
+		margin-left: -60px;
+		width: 120px;
+		height: 120px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}

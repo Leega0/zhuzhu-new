@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body class="ui-bg-white">
+  <div class="share-top">
+    <p class="share-name">疯狂的蜗牛</p>
+    <p class="share-text">在猪猪钱罐创建了钱罐，需要您的加油</p>
+  </div>
+
+  <div class="share-content">
+    <img src="images/test-head.jpg" alt="" class="share-img"/>
+    <img src="images/share/share-bg.png" alt="" class="share-content-bg"/>
+    <p class="share-content-total">目标 50000 元，还差 <span class="ui-font-main">1000.47</span> 元</p>
+
+    <div class="share-wrap">
+      <input id="share-progress" type="hidden" value="70%"/>
+      <div class="share-shade-01"><div class="share-circle-01"></div></div>
+      <div class="share-shade-02"><div class="share-circle-02"></div></div>
+      <div class="share-shade-bg"></div>
+      <div class="share-progress-content">
+        <p class="share-progress-title">进度:</p>
+        <p class="share-progress-value"><span>85.01</span>%</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-container">
+    <a id="invite" href="javascript:void(0);" class="ui-btn ui-btn-main">加油即拿5000特权金</a>
+  </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.min.js"></script>
+<script>
+  var $captcha = $('.ui-input-btn');
+
+  var sendTimeout;
+  $captcha.one('click', sendCode);
+
+  function sendCode(e) {
+    var $this = $(this);
+    var count = 90;
+
+    //发送验证码操作...
+
+
+    $this.empty().text(count + '秒').addClass('ui-btn-whiteBlack-border').removeClass('ui-btn-main');
+
+    sendTimeout = setInterval(function() {
+      count--;
+
+      if (count < 0) {
+        clearInterval(sendTimeout);
+        $captcha.one('click', sendCode);
+        $this.empty().text('重新发送').addClass('ui-btn-main').removeClass('ui-btn-whiteBlack-border');
+      } else {
+        $this.empty().text(count + '秒');
+      }
+    }, 1000);
+  }
+
+  var $keyHelp = $('.login-key-help');
+
+  $keyHelp.on('click', function() {
+    $.dialog('.login-key-dialog');
+  });
+
+
+  /**
+   * 进度条
+   */
+  var count = parseInt($('#share-progress').val());
+  var $circle1 = $('.share-circle-01'),
+    $circle2 = $('.share-circle-02'),
+    angle, current_angle = -180, current_circle = 0;
+
+  if (count < 50) {
+    angle = 180 / 50 * count - 180;
+  } else if (count >= 50 && count <= 100) {
+    angle = 180 / 50 * (count - 50) - 180;
+  } else if (count >= 100) {
+    angle = 0
+  }
+
+
+
+  var circleTimeout = setInterval("circleProgress01()", 10);
+
+  function circleProgress01() {
+    if (current_circle === 0) {
+      if (count < 50) {
+
+        if (current_angle >= angle) {
+          clearInterval(circleTimeout);
+          return;
+        }
+
+      } else {
+
+        if (current_angle > 0) {
+          current_circle = 1;
+          current_angle = -180;
+
+          return;
+        }
+
+      }
+
+      $circle1.css({
+        "transform" : "rotate(" + current_angle + "deg)",
+        "-webkit-transform" : "rotate(" + current_angle + "deg)"
+      });
+
+      current_angle = parseFloat((current_angle + 3.6).toFixed(2));
+
+    } else {
+
+      if (current_angle > angle) {
+        clearInterval(circleTimeout);
+        current_angle = -180;
+        current_circle = 0;
+        return;
+      }
+
+      $circle2.css({
+        "transform" : "rotate(" + current_angle + "deg)",
+        "-webkit-transform" : "rotate(" + current_angle + "deg)"
+      });
+
+      current_angle = parseFloat((current_angle + 3.6).toFixed(2));
+
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>存钱提醒</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+<body>
+<div class="remind-detail-wrap">
+<div class="ui-container">
+  <div class="item-content">
+    <div class="ui-input-wrap">
+      <div class="ui-input-body">
+        <div class="ui-input-content">
+          <input type="text" class="ui-input" placeholder="我的工资日，如：10日">
+          <a href="javascript:void(0);" class="ui-input-clear" style="display: none;"></a>
+        </div>
+        <p class="ui-input-placeholder">输入工资日后，猪猪会在每月工资日，提醒您存钱哦</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ui-container">
+  <a href="#" class="ui-btn ui-btn-whiteBlack-border">提&nbsp;&nbsp;交</a>
+</div>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  $("#cancle_remind").on('click',function(){
+      $.dialog('确定取消',{
+        type:'alert',
+        submitCallback:function(){
+          //回调反馈
+          alert("取消成功")
+      }
+      });
+      $(".ui-dialog-text").addClass('ui-align-center')
+  })
+</script>
+</body>
+</html>

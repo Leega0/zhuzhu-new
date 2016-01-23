@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>投资详情</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body>
+    <div class="prize-tab clearfix ui-bg-white">
+      <a href="#" class="prize-tab-item prize-tab-item-active">债权详情</a>
+      <a href="#" class="prize-tab-item">投资协议</a>
+    </div>
+    <div class="ui-container">
+    	<div class="item-content">
+    		<dl class="invest-detail-section">
+    			<dd><span class="prname">项目名称</span> <p class="prcontent">装修房屋（项目编号：021870）</p></dd>
+    			<dd><span class="prname">投资金额</span><p class="prcontent">100元</p></dd>
+    			<dd><span class="prname">投资时间</span><p class="prcontent">2016-01-18</p><a href="#" class="ui-btn-link ui-btn-link-gray ui-fr">查看合同</a></dd>
+    		</dl>
+    	</div>
+    	<div class="item-content">
+    		<dl class="invest-detail-section">
+    			<dd><span class="prname">项目名称</span> <p class="prcontent">装修房屋（项目编号：021870）</p></dd>
+    			<dd><span class="prname">投资金额</span><p class="prcontent">100元</p></dd>
+    			<dd><span class="prname">投资时间</span><p class="prcontent">2016-01-18</p><a href="#" class="ui-btn-link ui-btn-link-gray ui-fr">查看合同</a></dd>
+    		</dl>
+    	</div>
+    	<div class="item-content">
+    		<dl class="invest-detail-section">
+    			<dd><span class="prname">项目名称</span> <p class="prcontent">装修房屋（项目编号：021870）</p></dd>
+    			<dd><span class="prname">投资金额</span><p class="prcontent">100元</p></dd>
+    			<dd><span class="prname">投资时间</span><p class="prcontent">2016-01-18</p><a href="#" class="ui-btn-link ui-btn-link-gray ui-fr">查看合同</a></dd>
+    		</dl>
+    	</div>
+    </div>
+</body>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var $showBtn = $('.depositPrincipal-btn');
+
+  $showBtn.on('click', function() {
+    var _self = $(this);
+    var $detail = $('.depositPrincipal-detail');
+
+    if(_self.hasClass('depositPrincipal-btn-close')) {
+      _self.addClass('depositPrincipal-btn-open').removeClass('depositPrincipal-btn-close');
+      $detail.show(300);
+    } else {
+      _self.removeClass('depositPrincipal-btn-open').addClass('depositPrincipal-btn-close');
+      $detail.hide(300);
+    }
+  });
+</script>
+</html>
