@@ -22,10 +22,11 @@
 		height: 91%;
 		margin: 0.5rem auto;
 		overflow: hidden;
-		 background-image:url(../images/lottery/lottery-border.png);
+		 background-image:url(../images/lottery/lottery-border-sprite.png);
 		 background-repeat:no-repeat;
-		 background-size:100% 100%;
-		 animation:biling linear 1.6s infinite;
+		 background-size:200% 100%;
+		 animation:biling linear 2s infinite;
+		 animation-timing-function:steps(1,end);
 	}
 .prize-lotter{
 	margin:0 auto;
@@ -43,7 +44,7 @@
 		&:nth-child(5){
 			padding-left:0;
 			padding-right: 0;
-			width: 33%;
+			width: 33.5%;
 		}
 		height: 5.315rem;
 		padding: 0.1rem;
@@ -65,20 +66,8 @@
 	}
 }
 @keyframes biling{
-	0%{
-		background-image:none;
-	}
-	25%{
-		background-image:url(../images/lottery/lottery-border-white.png);
-	}
-	50%{
-		background-image:none;
-	}
-	75%{
-		background-image:url(../images/lottery/lottery-border-yellow.png);
-	}
-	100%{
-		background-image: none;
+	50% {
+		background-position: 100% 0;
 	}
 }
 
